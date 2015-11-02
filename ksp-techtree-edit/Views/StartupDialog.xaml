@@ -1,0 +1,41 @@
+﻿<Window x:Class="ksp_techtree_edit.Views.StartupDialog"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:properties="clr-namespace:ksp_techtree_edit.Properties"
+
+	Title="Welcome" Height="300" Width="300"
+	WindowStartupLocation="CenterOwner"
+	DataContext="{Binding RelativeSource={RelativeSource Self}}">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid Grid.Row="1" Grid.Column="1" Width="250" >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+				<RowDefinition Height="10"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Button Content="Find KSP Folder..." HorizontalAlignment="Center" Width="200" Click="SetKSPFolder" />
+			<Label Grid.Row="1" Content="{Binding Source={x:Static properties:Settings.Default}, Path=KspPath}" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Content}" MinHeight="14" HorizontalAlignment="Center"/>
+            <Button Grid.Row="2" Content="(KSP1.04) Load YongeTech tree..." HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="200" Click="LoadYongeTree" Padding="5" IsEnabled="{Binding CanLoad}"/>
+            <Button Grid.Row="3" Content="Load TechMananger tree..." HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="200" Click="LoadTree" Padding="5" IsEnabled="{Binding CanLoad}"/>
+            <Button Grid.Row="4" Content="Load ATC tree..." HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="200" Click="LoadATCTree" Padding="5" IsEnabled="{Binding CanLoad}"/>
+            <Button Grid.Row="6" Content="New Stock Tree" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="200" Click="NewStockTree" Padding="5" IsEnabled="{Binding CanLoad}"/>
+            <Button Grid.Row="7" Content="New Blank Tree" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="200" Click="NewBlankTree" Padding="5" IsEnabled="{Binding CanLoad}"/>
+		</Grid>
+
+	</Grid>
+</Window>

@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="ksp_techtree_edit.Controls.TechTreeDiagram"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:ksp_techtree_edit.ViewModels"
+             xmlns:converters="clr-namespace:ksp_techtree_edit.Converters"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300"
+			 MouseMove="OnMouseMove">
+	<UserControl.Resources>
+		<converters:PosXToCanvasPointConverter x:Key="PosXToCanvasConverter"/>
+		<converters:PosYToCanvasPointConverter x:Key="PosYToCanvasConverter"/>
+		<converters:PointToCanvasPointConverter x:Key="PointToCanvasConverter"/>
+	</UserControl.Resources>
+	<UserControl.DataContext>
+		<viewModels:TechTreeViewModel/>
+	</UserControl.DataContext>
+	<Grid x:Name="TechTreeGrid" PreviewMouseDown="GridOnPreviewMouseDown" d:DataContext="{d:DesignInstance d:Type=viewModels:TechTreeViewModel}">
+		<ItemsControl Name="NodeConnectionsControl" ItemsSource="{Binding Connections}">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<Canvas VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+									Width="3100" Height="1500" Background="DarkSlateBlue">
+						<Canvas.LayoutTransform>
+							<ScaleTransform ScaleX="1" ScaleY="-1" CenterX=".5" CenterY=".5"/>
+						</Canvas.LayoutTransform>
+					</Canvas>
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="{x:Type viewModels:ConnectionViewModel}">
+					<Canvas>
+					<Path Stroke="Chocolate" StrokeThickness="1">
+						<Path.Data>
+							<LineGeometry
+								StartPoint="{Binding StartNodeViewModel.Pos, Converter={StaticResource PointToCanvasConverter}}"
+								EndPoint="{Binding EndNodeViewModel.Pos, Converter={StaticResource PointToCanvasConverter}}"/>
+						</Path.Data>
+					</Path>
+					<Path Stroke="Chocolate" StrokeThickness="1">
+						<Path.Data>
+							<EllipseGeometry Center="{Binding StartNodeViewModel.Pos, Converter={StaticResource PointToCanvasConverter}}"
+								RadiusX="3" RadiusY="3"/>
+						</Path.Data>
+					</Path>
+					</Canvas>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		<ItemsControl Name="TechItemsControl" ItemsSource="{Binding TechTree}">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<Canvas x:Name="TechTreeCanvas" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+									Width="2500" Height="1500"/>
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<ItemsControl.ItemContainerStyle>
+				<Style d:DataContext="{d:DesignInstance d:Type=viewModels:TechNodeViewModel}">
+					<Setter Property="Canvas.Left" Value="{Binding Pos.X, Converter={StaticResource PosXToCanvasConverter}}"/>
+					<Setter Property="Canvas.Bottom" Value="{Binding Pos.Y, Converter={StaticResource PosYToCanvasConverter}}"/>
+					<Setter Property="Canvas.ZIndex" Value="{Binding Zlayer}"/>
+				</Style>
+			</ItemsControl.ItemContainerStyle>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="{x:Type viewModels:TechNodeViewModel}">
+					<Thumb Width="40" Height="40"
+									DragDelta="TechNode_OnDragDelta"
+									DragCompleted="Thumb_OnDragCompleted"
+									DragStarted="Thumb_OnDragStarted">
+						<Thumb.Template>
+							<ControlTemplate>
+								<Grid>
+									<Rectangle x:Name="NodeBackground" Fill="CadetBlue" />
+									<Label Content="{Binding Title[0]}"
+													HorizontalAlignment="Center"
+													VerticalAlignment="Center"/>
+									<Rectangle Fill="Transparent" Cursor="Hand"/>
+								</Grid>
+								<ControlTemplate.Triggers>
+									<Trigger Property="Thumb.IsMouseOver" Value="True">
+										<Setter TargetName="NodeBackground" Property="Fill" Value="PowderBlue"/>
+									</Trigger>
+									<DataTrigger Binding="{Binding IsSelected}" Value="True">
+										<Setter TargetName="NodeBackground" Property="Fill" Value="RoyalBlue"/>
+									</DataTrigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Thumb.Template>
+					</Thumb>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</Grid>
+</UserControl>

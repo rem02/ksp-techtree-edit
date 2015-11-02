@@ -1,0 +1,92 @@
+INTERNAL
+{
+	name = MK3_Cockpit_Int
+	  MODULE
+  {
+    name = InternalCameraSwitch
+    colliderTransformName = focus_W1
+    cameraTransformName = Camera_Focus_W1
+  }
+  	  MODULE
+  {
+    name = InternalCameraSwitch
+    colliderTransformName = focus_W2
+    cameraTransformName = Camera_Focus_W2
+  }
+    	  MODULE
+  {
+    name = InternalCameraSwitch
+    colliderTransformName = focus_W3
+    cameraTransformName = Camera_Focus_W3
+  }
+      	  MODULE
+  {
+    name = InternalCameraSwitch
+    colliderTransformName = focus_W4
+    cameraTransformName = Camera_Focus_W4
+  }
+        	  MODULE
+  {
+    name = InternalCameraSwitch
+    colliderTransformName = focus_W5
+    cameraTransformName = Camera_Focus_W5
+  }
+
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Seat_Left
+		portraitCameraName = Camera_Left
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Seat_Right
+		portraitCameraName = Camera_Right
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Seat_BackRight
+		portraitCameraName = Camera_BackRight
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Seat_BackLeft
+		portraitCameraName = Camera_BackLeft
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Seat_UpLeft
+		portraitCameraName = Camera_UpLeft
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = Seat_UpRight
+		portraitCameraName = Camera_UpRight
+		allowCrewHelmet = false
+	}
+
+//	MODULE
+//	{
+//		name = InternalSeat
+//		seatTransformName = Seat_Right001
+//		portraitCameraName = Camera_UpRight
+//		allowCrewHelmet = false
+//	}
+//	MODULE
+//	{
+//		name = InternalSeat
+//		seatTransformName = Seat_Left001
+//		portraitCameraName = Camera_UpLeft
+//		allowCrewHelmet = false
+//	}
+}

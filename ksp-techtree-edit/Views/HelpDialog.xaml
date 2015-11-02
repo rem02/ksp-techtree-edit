@@ -1,0 +1,48 @@
+<Window x:Class="ksp_techtree_edit.Views.HelpDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Keybindings" Height="300" Width="300"
+		WindowStartupLocation="CenterOwner">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Label Grid.Row="1"
+			Content="Delete:"
+			HorizontalAlignment="Center"
+			FontWeight="Bold"/>
+		<TextBlock Grid.Row="2"
+			Margin="5,0,5,12"
+			Text="Delete selected node"
+			TextWrapping="WrapWithOverflow"
+			HorizontalAlignment="Center"
+			TextAlignment="Center"/>
+		<Label Grid.Row="3"
+			Content="CTRL+Click:"
+			HorizontalAlignment="Center"
+			FontWeight="Bold"/>
+		<TextBlock Grid.Row="4"
+			Margin="5,0,5,12"
+			Text="Connect selected node to the node clicked or remove connection between nodes"
+			TextWrapping="WrapWithOverflow"
+			HorizontalAlignment="Center"
+			TextAlignment="Center"/>
+		<Label Grid.Row="5"
+			Content="SHIFT+Click:"
+			HorizontalAlignment="Center"
+			FontWeight="Bold"/>
+		<TextBlock Grid.Row="6"
+			Margin="5,0,5,12"
+			Text="Create a new node at mouse"
+			TextWrapping="WrapWithOverflow"
+			HorizontalAlignment="Center"
+			TextAlignment="Center"/>
+	</Grid>
+</Window>

@@ -1,0 +1,10 @@
+C:\Users\Remi\Desktop\ksp-techtree-edit-master\KerbalParser\bin\Debug\KerbalParser.dll
+C:\Users\Remi\Desktop\ksp-techtree-edit-master\KerbalParser\bin\Debug\KerbalParser.pdb
+C:\Users\Remi\Desktop\ksp-techtree-edit-master\KerbalParser\obj\Debug\KerbalParser.csprojResolveAssemblyReference.cache
+C:\Users\Remi\Desktop\ksp-techtree-edit-master\KerbalParser\obj\Debug\KerbalParser.dll
+C:\Users\Remi\Desktop\ksp-techtree-edit-master\KerbalParser\obj\Debug\KerbalParser.pdb
+C:\Users\Remi\Desktop\KSPTechTreeEditor\KerbalParser\bin\Debug\KerbalParser.dll
+C:\Users\Remi\Desktop\KSPTechTreeEditor\KerbalParser\bin\Debug\KerbalParser.pdb
+C:\Users\Remi\Desktop\KSPTechTreeEditor\KerbalParser\obj\Debug\KerbalParser.csprojResolveAssemblyReference.cache
+C:\Users\Remi\Desktop\KSPTechTreeEditor\KerbalParser\obj\Debug\KerbalParser.dll
+C:\Users\Remi\Desktop\KSPTechTreeEditor\KerbalParser\obj\Debug\KerbalParser.pdb

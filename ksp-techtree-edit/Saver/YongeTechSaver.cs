@@ -1,0 +1,199 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ksp_techtree_edit.ViewModels;
+using System.Globalization;
+using ksp_techtree_edit.Util;
+using System.Windows;
+
+namespace ksp_techtree_edit.Saver
+{
+    public class YongeTechSaver : TreeSaver
+    {
+
+        public override void Save(TechTreeViewModel techtreeviewmodel, string path)
+        {
+            this.StartTree(techtreeviewmodel);
+            var totalCost = 0;
+            foreach (var node in techtreeviewmodel.TechTree)
+            {
+                totalCost += node.Cost;
+                var parts = new List<string>();
+                foreach (var part in node.Parts)
+                {
+                    parts.Add(part.PartName);
+                }
+                var parents = new List<string>();
+                foreach (var parent in node.Parents)
+                {
+                    String parentPos = FindParentPosition( node.Pos, parent.Pos );
+                    String parentIdPos = parent.TechId + "|" + parentPos;
+                    parents.Add(parentIdPos);
+                }
+                this.StartNode().
+                      SaveAttribute(new KeyValuePair<string, string>("id", node.TechId)).
+                      SaveAttribute(new KeyValuePair<string, string>("nodepart", node.NodeName)).
+                      SaveAttribute(new KeyValuePair<string, string>("title", node.Title)).
+                      SaveAttribute(new KeyValuePair<string, string>("description", node.Description)).
+                      SaveAttribute(new KeyValuePair<string, string>("cost", node.Cost.ToString(CultureInfo.InvariantCulture))).
+                      SavePosition(node.Pos.X, node.Pos.Y, node.Zlayer).
+                      SaveAttribute(new KeyValuePair<string, string>("icon", node.Icon.ToString())).
+                      SaveAttribute(new KeyValuePair<string, string>("anyToUnlock", node.AnyParent.ToString())).
+                      SaveAttribute(new KeyValuePair<string, string>("hideEmpty", node.HideIfEmpty.ToString())).
+                      SaveAttribute(new KeyValuePair<string, string>("hideIfNoBranchParts", node.HideIfNoBranchParts.ToString())).
+                      StartParents().
+                      SaveParents(parents).
+                      EndParents().
+                      StartParts().
+                      SaveParts(node).
+                      EndParts().
+                      EndNode();
+            }
+            this.EndTree();
+            this.Save(path);
+            Logger.Log("Tree saved succesfully to {0}. Total cost: {1} science. Total nodes: {2} nodes.", path, totalCost, techtreeviewmodel.TechTree.Count);
+        }
+
+        private String FindParentPosition(Point node, Point parent )
+        {
+            if (node.Y == parent.Y && node.X > parent.X)
+                return "RL";
+            if (node.Y == parent.Y && node.X < parent.X)
+                return "LR";
+            if (node.X == parent.X && node.Y > parent.Y)
+                return "TB";
+            if (node.X == parent.X && node.Y < parent.Y)
+                return "BT";
+            if (node.X < parent.X && node.Y > parent.Y)
+                return "LR";
+            if (node.X < parent.X && node.Y < parent.Y)
+                return "LR";
+            if (node.X > parent.X && node.Y > parent.Y)
+                return "RL";
+            if (node.X > parent.X && node.Y < parent.Y)
+                return "RL";
+
+            return null;
+        }
+
+        public override TreeSaver StartTree(TechTreeViewModel techTree = null)
+        {
+            AddLine("TechTree");
+            AddLine("{");
+            IndentationLevel++;
+            AddLine("id = TEDGeneratedTree");
+            AddLine("label = TED Generated Tree");
+            return this;
+        }
+
+        public override TreeSaver StartNode()
+        {
+            AddLine("RDNode");
+            AddLine("{");
+            IndentationLevel++;
+            return this;
+        }
+
+        public override TreeSaver SaveAttribute(KeyValuePair<string, string> nameAttributePair)
+        {
+            AddLine(nameAttributePair.Key + " = " + nameAttributePair.Value);
+            return this;
+        }
+
+        public override TreeSaver SavePosition(double x, double y, double z)
+        {
+            var pos = x + "," + y + "," + z;
+            AddLine("pos = " + pos);
+            return this;
+        }
+
+        public override TreeSaver StartParts()
+        {
+            AddLine("Unlocks");
+            AddLine("{");
+            IndentationLevel++;
+            return this;
+        }
+
+        public override TreeSaver SaveParts(TechNodeViewModel node)
+        {
+            foreach (var part in node.Parts)
+            {
+                AddLine("part = " + part.PartName);
+            }
+            return this;
+        }
+
+        public override TreeSaver EndParts()
+        {
+            IndentationLevel--;
+            AddLine("}");
+            return this;
+        }
+
+        public override TreeSaver StartParents()
+        {
+            return this;
+        }
+
+        public override TreeSaver SaveParents(IEnumerable<string> parentsList)
+        {
+            var parents = parentsList as string[] ?? parentsList.ToArray();
+            String[] decode;
+            String parentId, pos;
+            foreach (String parent in parents)
+            {
+                decode = parent.Split('|');
+                parentId = decode[0];
+                pos = decode[1];
+                AddLine("Parent");
+                AddLine("{");
+                IndentationLevel++;
+                AddLine("parentID = " + parentId);
+                switch (pos) {
+                    case "LR":
+                        AddLine("lineFrom = LEFT");
+                        AddLine("lineTo = RIGHT");
+                        break;
+                    case "RL":
+                        AddLine("lineFrom = RIGHT");
+                        AddLine("lineTo = LEFT");
+                        break;
+                    case "TB":
+                        AddLine("lineFrom = TOP");
+                        AddLine("lineTo = BOTTOM");
+                        break;
+                    case "BT":
+                        AddLine("lineFrom = BOTTOM");
+                        AddLine("lineTo = TOP");
+                        break;
+                }
+                IndentationLevel--;
+                AddLine("}");                
+            }
+            return this;
+        }
+
+        public override TreeSaver EndParents()
+        {
+            return this;
+        }
+
+        public override TreeSaver EndNode()
+        {
+            IndentationLevel--;
+            AddLine("}");
+            return this;
+        }
+
+        public override TreeSaver EndTree()
+        {
+            IndentationLevel--;
+            AddLine("}");
+            AddLine();
+            return this;
+        } 
+    }
+}

@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="ksp_techtree_edit.Controls.SideBar"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:viewModels="clr-namespace:ksp_techtree_edit.ViewModels"
+	xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+	xmlns:controls="clr-namespace:ksp_techtree_edit.Controls"
+	mc:Ignorable="d"
+	d:DesignHeight="300" d:DesignWidth="300">
+	<UserControl.DataContext>
+		<viewModels:TechTreeViewModel/>
+	</UserControl.DataContext>
+	<DockPanel>
+		<Border DockPanel.Dock="Top" BorderThickness="2,0,0,0">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="7"/>
+					<RowDefinition Height="2*"/>
+					<RowDefinition Height="7"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="7"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Border Grid.Row="0" BorderBrush="LawnGreen" BorderThickness="0,0,0,2">
+					<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+						<Grid Margin="10,10,10,5" HorizontalAlignment="Left">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+							</Grid.RowDefinitions>
+
+							<Label Grid.Row="0"
+								Content="Selected Node"
+								FontWeight="Bold"
+								HorizontalAlignment="Left"
+								Margin="8,9,0,0"
+								VerticalAlignment="Top"/>
+							<Label Grid.Row="1"
+								Content="{Binding WorkspaceViewModel.SelectedNode.Title}"
+								HorizontalAlignment="Left"
+								Margin="8,9,0,0"
+								VerticalAlignment="Top"/>
+							<Label Grid.Row="2"
+								Content="{Binding WorkspaceViewModel.SelectedNode.Cost}"
+								HorizontalAlignment="Left"
+								Margin="8,9,0,0"
+								VerticalAlignment="Top"/>
+							<TextBlock Grid.Row="3"
+								Text="{Binding WorkspaceViewModel.SelectedNode.Description}"
+								HorizontalAlignment="Left"
+								Margin="14,14,0,0"
+								VerticalAlignment="Top"
+								TextWrapping="WrapWithOverflow"/>
+						</Grid>
+					</ScrollViewer>
+				</Border>
+				<GridSplitter Grid.Row="1" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
+				<xctk:PropertyGrid
+					Grid.Row="2"
+					Name="NodePropertyGrid"
+					IsCategorized="False"
+					ShowSearchBox="False"
+					ShowSortOptions="False"
+					ShowTitle="True"
+					SelectedObjectName="{Binding WorkspaceViewModel.SelectedNode.Title}"
+					SelectedObject="{Binding WorkspaceViewModel.SelectedNode}"
+					>
+					<xctk:PropertyGrid.PropertyDefinitions>
+						<xctk:PropertyDefinition TargetProperties="Width" IsBrowsable="False"/>
+						<xctk:PropertyDefinition TargetProperties="Height" IsBrowsable="False"/>
+						<xctk:PropertyDefinition TargetProperties="IsSelected" IsBrowsable="False"/>
+						<xctk:PropertyDefinition TargetProperties="TechNode" IsBrowsable="False"/>
+						<xctk:PropertyDefinition TargetProperties="Parents" IsBrowsable="False"/>
+						<xctk:PropertyDefinition TargetProperties="Parts" IsBrowsable="False"/>
+						<xctk:PropertyDefinition TargetProperties="Title" DisplayOrder="0"/>
+						<xctk:PropertyDefinition TargetProperties="Cost" DisplayOrder="1"/>
+						<xctk:PropertyDefinition TargetProperties="Description" DisplayOrder="2"/>
+						<xctk:PropertyDefinition TargetProperties="Icon" DisplayOrder="3"/>
+						<xctk:PropertyDefinition TargetProperties="NodeName" DisplayOrder="4"/>
+						<xctk:PropertyDefinition TargetProperties="TechId,Pos" DisplayOrder="5"/>
+						<xctk:PropertyDefinition TargetProperties="ZLayer" DisplayOrder="6"/>
+						<xctk:PropertyDefinition TargetProperties="AnyParent,HideIfEmpty,HideIfNoBranchParts" DisplayOrder="10"/>
+					</xctk:PropertyGrid.PropertyDefinitions>
+				</xctk:PropertyGrid>
+				<GridSplitter Grid.Row="3" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
+				<controls:NodePartsList Grid.Row="4" x:Name="NodePartsListBox"/>
+				<GridSplitter Grid.Row="5" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
+				<controls:PartCatalog Grid.Row="6" x:Name="PartsListBox" />
+			</Grid>
+		</Border>
+	</DockPanel>
+</UserControl>

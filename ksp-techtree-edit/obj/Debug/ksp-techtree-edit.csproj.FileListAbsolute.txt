@@ -1,0 +1,62 @@
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe.config
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KerbalParser.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KerbalParser.pdb
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\HelpDialog.baml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\NodePartsList.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\PartCatalog.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\SideBar.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\TechTreeDiagram.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\HelpDialog.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\StartupDialog.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\App.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.cache
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.lref
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\NodePartsList.baml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\PartCatalog.baml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\SideBar.baml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\TechTreeDiagram.baml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\MainWindow.baml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\StartupDialog.baml
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.g.resources
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp_techtree_edit.Properties.Resources.resources
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csproj.GenerateResource.Cache
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
+C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache
