@@ -231,18 +231,6 @@ namespace ksp_techtree_edit.Views
             }
         }
 
-        //OK
-		private void SaveClick(object sender, RoutedEventArgs e)
-		{
-            this.Save(new TechManagerSaver());
-		}
-
-        //OK
-		private void SaveATCClick(object sender, RoutedEventArgs e)
-		{
-            this.Save(new ATCSaver());
-		}
-
         //OK        
         private void SaveYongeTechClick(object sender, RoutedEventArgs e)
         {
@@ -275,5 +263,10 @@ namespace ksp_techtree_edit.Views
 		{
 			Logger.Log("Application closed");
 		}
-	}
+
+        private void SaveClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
 }

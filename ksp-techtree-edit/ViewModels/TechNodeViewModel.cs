@@ -135,10 +135,16 @@ namespace ksp_techtree_edit.ViewModels
 
 		public Icon Icon
 		{
-			get { return _techNode.Icon; }
+			get
+            {
+                
+
+                return _techNode.Icon;
+            }
 			set
 			{
-				if (_techNode.Icon == value) return;
+				if (_techNode.Icon == value)
+                    return;
 				_techNode.Icon = value;
 				OnPropertyChanged();
 			}

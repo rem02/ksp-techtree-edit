@@ -136,8 +136,6 @@
     <Compile Include="Models\PartCollection.cs" />
     <Compile Include="Models\TechNode.cs" />
     <Compile Include="Models\TechTree.cs" />
-    <Compile Include="Saver\ATCSaver.cs" />
-    <Compile Include="Saver\TechManagerSaver.cs" />
     <Compile Include="Saver\TreeSaver.cs" />
     <Compile Include="Saver\YongeTechSaver.cs" />
     <Compile Include="Util\ExtensionMethods.cs" />

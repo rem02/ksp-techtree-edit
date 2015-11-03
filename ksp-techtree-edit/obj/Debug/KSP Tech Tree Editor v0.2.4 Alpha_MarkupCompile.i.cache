@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\
 ksp_techtree_edit
 none
 false
 DEBUG;TRACE
-C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\App.xaml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\App.xaml
 7-714024791
 
-38-1128069683
-77-1610353115
+36-559727636
+77374955254
 Controls\NodePartsList.xaml;Controls\PartCatalog.xaml;Controls\SideBar.xaml;Controls\TechTreeDiagram.xaml;Views\HelpDialog.xaml;Views\MainWindow.xaml;Views\StartupDialog.xaml;
 
 False

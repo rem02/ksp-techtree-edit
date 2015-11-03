@@ -54,7 +54,7 @@ namespace ksp_techtree_edit.Models
 			Pos = new Point(0, 0);
 			Zlayer = 0;
 			TechId = GenerateTechId();
-			Icon = Icon.BASICROCKETRY;
+			Icon = Icon.RDicon_generic;
 			AnyParent = false;
 			HideIfEmpty = false;
 			HideIfNoBranchParts = false;
@@ -136,7 +136,7 @@ namespace ksp_techtree_edit.Models
 				Icon icon;
 				if (!Enum.TryParse(v["icon"].First(), true, out icon))
 				{
-					icon = Icon.UNDEFINED;
+					icon = Icon.RDicon_generic;
 				}
 				Icon = icon;
 			}
