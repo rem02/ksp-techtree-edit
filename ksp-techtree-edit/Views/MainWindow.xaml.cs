@@ -47,7 +47,7 @@ namespace ksp_techtree_edit.Views
 		}
 
         // OK
-		public void LoadTree(string path, TreeType treeType = TreeType.TechMananger)
+		public void LoadTree(string path, TreeType treeType = TreeType.YongeTech)
 		{
 			ResetTree();
 			var nameNodeHashtable = new Dictionary<string, TechNodeViewModel>();
@@ -56,18 +56,15 @@ namespace ksp_techtree_edit.Views
 				return;
 			}
 			_config = ParseTree(path);
+            // Here if you add a new treetype
 			switch (treeType)
 			{
+                case TreeType.StockTechTree:
+
+                    break;
                 case TreeType.YongeTech:
                     LoadYongeTree(nameNodeHashtable);
                     break;
-				case TreeType.TechMananger:
-                    LoadTechTree(nameNodeHashtable);
-                    break;
-
-				case TreeType.ATC:
-                    LoadATCTree(nameNodeHashtable);
-					break;
 			}
 			_treeData.LinkNodes();
 			_treeData.WorkspaceViewModel.StatusBarText = "Tree Loaded";
@@ -79,99 +76,51 @@ namespace ksp_techtree_edit.Views
             return parser.ParseConfig(path);
         }
 
-        /**
-         * TODO
-         */
+        //OK
         private void LoadYongeTree(Dictionary<string, TechNodeViewModel> nameNodeHashtable)
         {
-            var techNodes = _config.First(child => child.Name == "TechTree").Children.
-                                    Where(node => node.Name == "RDNode").ToArray();
+            var techNodes = _config.First(child => child.Name == "TechTree").Children.Where(node => node.Name == "RDNode").ToArray();
 
             foreach (KerbalNode node in techNodes.Where(kerbalNode => kerbalNode.Values.ContainsKey("nodepart"))) {
-
-
-            }
-        }
-
-        //OK
-        private void LoadTechTree(Dictionary<string, TechNodeViewModel> nameNodeHashtable)
-        {
-            var techNodes =  _config.First( child => child.Name == "TECHNOLOGY_TREE_DEFINITION").
-                                            Children.Where(node => node.Name == "NODE").ToArray();
-            foreach (var node in techNodes.Where( kerbalNode =>  kerbalNode.Values.ContainsKey("name")))
-            {
                 var v = node.Values;
-                var name = v["name"].First();
+                var id = v["id"].First();
                 TechNodeViewModel techNodeViewModel;
-                if (nameNodeHashtable.ContainsKey(name))
+                if (nameNodeHashtable.ContainsKey(id))
                 {
-                    techNodeViewModel = nameNodeHashtable[name];
+                    techNodeViewModel = nameNodeHashtable[id];
                 }
                 else
                 {
                     techNodeViewModel = new TechNodeViewModel();
-                    nameNodeHashtable.Add(name, techNodeViewModel);
+                    nameNodeHashtable.Add(id, techNodeViewModel);
                 }
                 techNodeViewModel.TechNode.PopulateFromSource(node);
-                if (v.ContainsKey("parents"))
-                {
-                    var parentsString = v["parents"].First();
-                    var parents = parentsString.Split(',');
-                    foreach (var parent in parents.Where( parent => !nameNodeHashtable.ContainsKey(parent)))
-                    {
-                        nameNodeHashtable.Add(parent, new TechNodeViewModel());
-                    }
-                    foreach (var parent in parents.Where( parent => !String.IsNullOrEmpty(parent) && nameNodeHashtable.ContainsKey(parent)))
-                    {
-                        techNodeViewModel.Parents.Add(nameNodeHashtable[parent]);
-                    }
-                }
-                _treeData.TechTree.Add(techNodeViewModel);
-            }
-        }
 
-        //OK
-        private void LoadATCTree(Dictionary<string, TechNodeViewModel> nameNodeHashtable)
-        {
-            var atcNodes = _config.First(child => child.Name == "TECH_TREE").Children.Where(node => node.Name == "TECH_NODE").ToArray();
-
-            foreach (var node in atcNodes.Where( kerbalNode => kerbalNode.Values.ContainsKey("name")))
-            {
-                var v = node.Values;
-                var name = v["name"].First();
-                TechNodeViewModel techNodeViewModel;
-                if (nameNodeHashtable.ContainsKey(name))
+                // Find parent
+                foreach (KerbalNode parentNode in node.Children.Where(child => child.Name == "Parent"))
                 {
-                    techNodeViewModel = nameNodeHashtable[name];
-                }
-                else
-                {
-                    techNodeViewModel = new TechNodeViewModel();
-                    nameNodeHashtable.Add(name, techNodeViewModel);
-                }
-                techNodeViewModel.TechNode.PopulateFromSource(node, TreeType.ATC);
-                foreach (var parentNode in node.Children.Where(child => child.Name == "PARENT_NODE"))
-                {
-                    var parentKeyValuePairs = parentNode.Values.Where(pair => pair.Key == "name");
+                    var parentKeyValuePairs = parentNode.Values.Where(pair => pair.Key == "parentID");
                     var parents = new List<string>();
                     foreach (var parentKeyValuePair in parentKeyValuePairs)
                     {
-                        parents.Add(parentKeyValuePair.Value.First());
+                        parents.Add( parentKeyValuePair.Value.First() );
                     }
-                    foreach (var parent in parents.Where( parent => !nameNodeHashtable.ContainsKey(parent)))
+                    foreach (var parent in parents.Where(parent => !nameNodeHashtable.ContainsKey(parent)))
                     {
                         nameNodeHashtable.Add(parent, new TechNodeViewModel());
                     }
-                    foreach (var parent in parents.Where( parent => !String.IsNullOrEmpty(parent) && nameNodeHashtable.ContainsKey(parent)))
+                    foreach (var parent in parents.Where(parent => !String.IsNullOrEmpty(parent) && nameNodeHashtable.ContainsKey(parent)))
                     {
                         techNodeViewModel.Parents.Add(nameNodeHashtable[parent]);
                     }
                 }
                 _treeData.TechTree.Add(techNodeViewModel);
+
+
             }
         }
 
-        public void FindParts(TreeType type = TreeType.TechMananger)
+        public void FindParts(TreeType type = TreeType.YongeTech)
         {
             var partCollectionViewModel = MainSideBar.PartsListBox.DataContext as PartCollectionViewModel;
 

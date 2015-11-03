@@ -92,15 +92,6 @@ namespace ksp_techtree_edit.Views
             Load("Select TechMananger tree to load", TreeType.YongeTech);
         }
 
-        private void LoadTree(object sender, RoutedEventArgs e)
-		{
-            Load("Select YongeTech tree to load", TreeType.TechMananger);          
-		}
-
-		private void LoadATCTree(object sender, RoutedEventArgs e)
-		{
-            Load("Select ATC tree to load", TreeType.ATC);
-		}
 
         /**
          * TODO check if exist stock.cfg 

@@ -63,7 +63,6 @@ C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe.config
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\HelpDialog.baml
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\NodePartsList.g.cs
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\PartCatalog.g.cs
@@ -122,3 +121,5 @@ D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\StartupDi
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.g.resources
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp_techtree_edit.Properties.Resources.resources
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csproj.GenerateResource.Cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\resources\StockTechTree.cfg

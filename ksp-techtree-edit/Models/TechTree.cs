@@ -41,8 +41,7 @@ namespace ksp_techtree_edit.Models
 
     public enum TreeType
     {
-        ATC,
-        TechMananger,
+        StockTechTree,
         YongeTech
     }
 

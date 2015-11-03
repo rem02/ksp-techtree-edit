@@ -92,8 +92,7 @@ namespace ksp_techtree_edit.ViewModels
             {
                 foreach (var parent in node.Parents)
                 {
-                    Connections
-                        .Add(new ConnectionViewModel(node, parent));
+                    Connections.Add(new ConnectionViewModel(node, parent));
                 }
             }
 		}
@@ -124,7 +123,8 @@ namespace ksp_techtree_edit.ViewModels
 		{
 			foreach (var stockNodeName in StockNodes)
 			{
-				if (!ContainsNodeName(stockNodeName)) return stockNodeName;
+				if (!ContainsNodePart(stockNodeName))
+                    return stockNodeName;
 			}
 
 			const string namePrefix = "newnode_";
@@ -134,7 +134,7 @@ namespace ksp_techtree_edit.ViewModels
 
 			for (var i = 0; i < limit; i++)
 			{
-				if (!ContainsNodeName(name))
+				if (!ContainsNodePart(name))
 				{
 					return name;
 				}
@@ -150,11 +150,11 @@ namespace ksp_techtree_edit.ViewModels
 			return name;
 		}
 
-		public bool ContainsNodeName(string nodeName)
+		public bool ContainsNodePart(string nodePart)
 		{
 			foreach (var nodeViewModel in TechTree)
 			{
-				if (nodeViewModel.NodeName == nodeName)
+				if (nodeViewModel.NodePart == nodePart)
 				{
 					return true;
 				}

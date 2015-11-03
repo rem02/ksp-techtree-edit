@@ -93,7 +93,8 @@ namespace ksp_techtree_edit.Controls
 			if (Keyboard.IsKeyDown(Key.LeftCtrl))
 			{
 				var selectedNode = techtree.WorkspaceViewModel.SelectedNode;
-				if (selectedNode == node || selectedNode == null) return;
+				if (selectedNode == node || selectedNode == null)
+                    return;
 
 				if (selectedNode.Parents.Contains(node) || node.Parents.Contains(selectedNode))
 				{
@@ -114,8 +115,7 @@ namespace ksp_techtree_edit.Controls
 			node.IsSelected = true;
 
 			techtree.WorkspaceViewModel.SelectedNode = node;
-			techtree.WorkspaceViewModel.StatusBarText = node.NodeName +
-			                                            " selected.";
+			techtree.WorkspaceViewModel.StatusBarText = node.NodePart + " selected.";
 		}
 
 		#endregion Methods
@@ -123,9 +123,11 @@ namespace ksp_techtree_edit.Controls
 		private void GridOnPreviewMouseDown(object sender, MouseButtonEventArgs e)
 		{
 			var techtree = DataContext as TechTreeViewModel;
-			if (techtree == null) return;
+			if (techtree == null)
+                return;
 
-			if (!Keyboard.IsKeyDown(Key.LeftShift)) return;
+			if (!Keyboard.IsKeyDown(Key.LeftShift))
+                return;
 
 			var grid = (Grid)sender;
 

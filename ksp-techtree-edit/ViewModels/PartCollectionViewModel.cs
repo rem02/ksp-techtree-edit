@@ -12,8 +12,7 @@ namespace ksp_techtree_edit.ViewModels
 
 		#region Members
 
-		public ObservableCollection<PartViewModel>
-			PartCollection { get; private set; }
+		public ObservableCollection<PartViewModel> PartCollection { get; private set; }
 
 		public WorkspaceViewModel WorkspaceViewModel
 		{

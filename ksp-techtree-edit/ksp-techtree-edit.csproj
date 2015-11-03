@@ -132,10 +132,12 @@
       <DependentUpon>TechTreeDiagram.xaml</DependentUpon>
     </Compile>
     <Compile Include="IconsEnum.cs" />
+    <Compile Include="Loader\TreeLoader.cs" />
     <Compile Include="Models\Part.cs" />
     <Compile Include="Models\PartCollection.cs" />
     <Compile Include="Models\TechNode.cs" />
     <Compile Include="Models\TechTree.cs" />
+    <Compile Include="Saver\StockTreeSaver.cs" />
     <Compile Include="Saver\TreeSaver.cs" />
     <Compile Include="Saver\YongeTechSaver.cs" />
     <Compile Include="Util\ExtensionMethods.cs" />
@@ -219,6 +221,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="resources\StockTechTree.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="stocknodes.kted" />
     <None Include="tree.cfg" />
   </ItemGroup>

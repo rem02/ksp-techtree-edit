@@ -9,7 +9,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="StockTreePath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">stock.cfg</Value>
+      <Value Profile="(Default)">StockTechTree.cfg</Value>
     </Setting>
   </Settings>
 </SettingsFile>

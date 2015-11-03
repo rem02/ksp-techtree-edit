@@ -99,7 +99,8 @@ namespace ksp_techtree_edit.Models
 			{
 				if (di.Parent != null)
 				{
-					if (di.Parent.Name == "GameData") return di.Name;
+					if (di.Parent.Name == "GameData")
+                        return di.Name;
 					di = di.Parent;
 					continue;
 				}

@@ -58,6 +58,7 @@ namespace ksp_techtree_edit
         RDicon_robotics,
         RDicon_automation,
         RDicon_nanolathing,
+        RDicon_telescope,
         RDicon_basicprobes,
         RDicon_highaltitudepropulsion,
         RDicon_largeprobes,
@@ -68,8 +69,8 @@ namespace ksp_techtree_edit
         RDicon_largeVolumeContainment,
         RDicon_miniaturization,
         RDicon_precisionpropulsion,
-        RDicon_propulsionSystems,
-        RDicon_telescope
+        RDicon_propulsionSystems
+        
     }
 
     public class IconStringConverter
@@ -130,6 +131,7 @@ namespace ksp_techtree_edit
             "RDicon_robotics",
             "RDicon_automation",
             "RDicon_nanolathing",
+            "RDicon_telescope",
             "RDicon_basicprobes",
             "RDicon_highaltitudepropulsion",
             "RDicon_largeprobes",
@@ -140,11 +142,14 @@ namespace ksp_techtree_edit
             "RDicon_largeVolumeContainment",
             "RDicon_miniaturization",
             "RDicon_propulsion-precision",
-            "RDicon_propulsionSystems",
-            "RDicon_telescope"
+            "RDicon_propulsionSystems"
+            
         };
 
+        public static String[] IconFile = {
+            ""
 
+        };
 
 
     }

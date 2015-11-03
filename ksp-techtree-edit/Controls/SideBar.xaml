@@ -76,13 +76,17 @@
 						<xctk:PropertyDefinition TargetProperties="TechNode" IsBrowsable="False"/>
 						<xctk:PropertyDefinition TargetProperties="Parents" IsBrowsable="False"/>
 						<xctk:PropertyDefinition TargetProperties="Parts" IsBrowsable="False"/>
-						<xctk:PropertyDefinition TargetProperties="Title" DisplayOrder="0"/>
-						<xctk:PropertyDefinition TargetProperties="Cost" DisplayOrder="1"/>
-						<xctk:PropertyDefinition TargetProperties="Description" DisplayOrder="2"/>
-						<xctk:PropertyDefinition TargetProperties="Icon" DisplayOrder="3"/>
-						<xctk:PropertyDefinition TargetProperties="NodeName" DisplayOrder="4"/>
-						<xctk:PropertyDefinition TargetProperties="TechId,Pos" DisplayOrder="5"/>
-						<xctk:PropertyDefinition TargetProperties="ZLayer" DisplayOrder="6"/>
+
+                        <xctk:PropertyDefinition TargetProperties="Id" DisplayOrder="0"/>
+                        <xctk:PropertyDefinition TargetProperties="NodePart" DisplayOrder="1"/>
+                        <xctk:PropertyDefinition TargetProperties="Title" DisplayOrder="2"/>						
+						<xctk:PropertyDefinition TargetProperties="Description" DisplayOrder="3"/>
+                        <xctk:PropertyDefinition TargetProperties="Cost" DisplayOrder="4"/>
+                        <xctk:PropertyDefinition TargetProperties="Icon" DisplayOrder="5"/>
+                        <xctk:PropertyDefinition TargetProperties="Scale" DisplayOrder="6" />						
+						<xctk:PropertyDefinition TargetProperties="Pos" DisplayOrder="7"/>
+						<xctk:PropertyDefinition TargetProperties="ZLayer" DisplayOrder="8"/>
+                        
 						<xctk:PropertyDefinition TargetProperties="AnyParent,HideIfEmpty,HideIfNoBranchParts" DisplayOrder="10"/>
 					</xctk:PropertyGrid.PropertyDefinitions>
 				</xctk:PropertyGrid>

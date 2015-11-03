@@ -17,7 +17,7 @@ namespace ksp_techtree_edit.Saver
         {
             this.StartTree(techtreeviewmodel);
             var totalCost = 0;
-            foreach (var node in techtreeviewmodel.TechTree)
+            foreach (TechNodeViewModel node in techtreeviewmodel.TechTree)
             {
                 totalCost += node.Cost;
                 var parts = new List<string>();
@@ -29,20 +29,21 @@ namespace ksp_techtree_edit.Saver
                 foreach (var parent in node.Parents)
                 {
                     String parentPos = FindParentPosition( node.Pos, parent.Pos );
-                    String parentIdPos = parent.TechId + "|" + parentPos;
+                    String parentIdPos = parent.Id + "|" + parentPos;
                     parents.Add(parentIdPos);
                 }
                 this.StartNode().
-                      SaveAttribute(new KeyValuePair<string, string>("id", node.TechId)).
-                      SaveAttribute(new KeyValuePair<string, string>("nodepart", node.NodeName)).
+                      SaveAttribute(new KeyValuePair<string, string>("id", node.Id)).
+                      SaveAttribute(new KeyValuePair<string, string>("nodepart", node.NodePart)).
                       SaveAttribute(new KeyValuePair<string, string>("title", node.Title)).
                       SaveAttribute(new KeyValuePair<string, string>("description", node.Description)).
                       SaveAttribute(new KeyValuePair<string, string>("cost", node.Cost.ToString(CultureInfo.InvariantCulture))).
                       SavePosition(node.Pos.X, node.Pos.Y, node.Zlayer).
                       SaveAttribute(new KeyValuePair<string, string>("icon", IconStringConverter.IconString[(int)node.Icon])).
-                      SaveAttribute(new KeyValuePair<string, string>("anyToUnlock", node.AnyParent.ToString())).
-                      SaveAttribute(new KeyValuePair<string, string>("hideEmpty", node.HideIfEmpty.ToString())).
+                      SaveAttribute(new KeyValuePair<string, string>("anyToUnlock", node.AnyToUnlock.ToString())).
+                      SaveAttribute(new KeyValuePair<string, string>("hideEmpty", node.HideEmpty.ToString())).
                       SaveAttribute(new KeyValuePair<string, string>("hideIfNoBranchParts", node.HideIfNoBranchParts.ToString())).
+                      SaveAttribute(new KeyValuePair<string, string>("scale", node.Scale.ToString()));
                       StartParents().
                       SaveParents(parents).
                       EndParents().
