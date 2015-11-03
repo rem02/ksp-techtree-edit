@@ -22,6 +22,7 @@ namespace ksp_techtree_edit
         RDicon_fuelsystems,
         RDicon_aerodynamicSystems,
         RDicon_advexploration,              //RDicon_exploration-advanced
+        RDicon_emgineering101,
         RDicon_precisionengineering,        //RDicon_engineering-precision
         RDicon_advelectrics,                //RDicon_electrics-advanced
         RDicon_specializedcontrol,
@@ -59,18 +60,17 @@ namespace ksp_techtree_edit
         RDicon_automation,
         RDicon_nanolathing,
         RDicon_telescope,
-        RDicon_basicprobes,
-        RDicon_highaltitudepropulsion,
-        RDicon_largeprobes,
         RDicon_aerospaceTech2,
-        RDicon_commandmodules,
+        RDicon_commandModules,      
         RDicon_advfuelSystems,
         RDicon_highPerformancefuelSystems,
         RDicon_largeVolumeContainment,
         RDicon_miniaturization,
         RDicon_precisionpropulsion,
-        RDicon_propulsionSystems
-        
+        RDicon_propulsionSystems,
+        RDicon_basicprobes,
+        RDicon_highaltitudepropulsion,
+        RDicon_largeprobes,          
     }
 
     public class IconStringConverter
@@ -78,7 +78,7 @@ namespace ksp_techtree_edit
 
         public static String[] IconString = {
             "RDicon_start",
-            "RDicon_rocketry-general",
+            "RDicon_rocketry-basic",
             "RDicon_rocketry-general",
             "RDicon_survivability",
             "RDicon_stability",
@@ -89,17 +89,18 @@ namespace ksp_techtree_edit
             "RDicon_construction-advanced",
             "RDicon_control-flight-advanced",
             "RDicon_electrics",
-            "RDicon_evatech",
+            "RDicon_evaTech",
             "RDicon_landing-advanced",
             "RDicon_rocketry-heavy",
-            "RDicon_fuelsystems",
+            "RDicon_fuelSystems",
             "RDicon_aerodynamicSystems",
             "RDicon_exploration-advanced",
+            "RDicon_emgineering101",
             "RDicon_engineering-precision",
             "RDicon_electrics-advanced",
             "RDicon_specializedcontrol",
             "RDicon_rocketry-heavier",
-            "RDicon_specializedconstruction",
+            "RDicon_construction-specialized",
             "RDicon_landing",
             "RDicon_flight-supersonic",
             "RDicon_generic",
@@ -132,9 +133,6 @@ namespace ksp_techtree_edit
             "RDicon_automation",
             "RDicon_nanolathing",
             "RDicon_telescope",
-            "RDicon_basicprobes",
-            "RDicon_highaltitudepropulsion",
-            "RDicon_largeprobes",
             "RDicon_aerospaceTech2",
             "RDicon_commandmodules",
             "RDicon_fuelSystems-advanced",
@@ -142,7 +140,11 @@ namespace ksp_techtree_edit
             "RDicon_largeVolumeContainment",
             "RDicon_miniaturization",
             "RDicon_propulsion-precision",
-            "RDicon_propulsionSystems"
+            "RDicon_propulsionSystems",
+            "RDicon_probes-basic",
+            "RDicon_flight-highAltitude",
+            "RDicon_probes-large"
+
             
         };
 

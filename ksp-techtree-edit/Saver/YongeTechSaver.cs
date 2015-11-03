@@ -40,7 +40,7 @@ namespace ksp_techtree_edit.Saver
                       SaveAttribute(new KeyValuePair<string, string>("cost", node.Cost.ToString(CultureInfo.InvariantCulture))).
                       SavePosition(node.Pos.X, node.Pos.Y, node.Zlayer).
                       SaveAttribute(new KeyValuePair<string, string>("icon", IconStringConverter.IconString[(int)node.Icon])).
-                      SaveAttribute(new KeyValuePair<string, string>("anyToUnlock", node.AnyToUnlock.ToString())).
+                      SaveAttribute(new KeyValuePair<string, string>("anyParent", node.AnyToUnlock.ToString())).
                       SaveAttribute(new KeyValuePair<string, string>("hideEmpty", node.HideEmpty.ToString())).
                       SaveAttribute(new KeyValuePair<string, string>("hideIfNoBranchParts", node.HideIfNoBranchParts.ToString())).
                       SaveAttribute(new KeyValuePair<string, string>("scale", node.Scale.ToString()));
@@ -55,28 +55,6 @@ namespace ksp_techtree_edit.Saver
             this.EndTree();
             this.Save(path);
             Logger.Log("Tree saved succesfully to {0}. Total cost: {1} science. Total nodes: {2} nodes.", path, totalCost, techtreeviewmodel.TechTree.Count);
-        }
-
-        private String FindParentPosition(Point node, Point parent )
-        {
-            if (node.Y == parent.Y && node.X > parent.X)
-                return "RL";
-            if (node.Y == parent.Y && node.X < parent.X)
-                return "LR";
-            if (node.X == parent.X && node.Y > parent.Y)
-                return "TB";
-            if (node.X == parent.X && node.Y < parent.Y)
-                return "BT";
-            if (node.X < parent.X && node.Y > parent.Y)
-                return "LR";
-            if (node.X < parent.X && node.Y < parent.Y)
-                return "LR";
-            if (node.X > parent.X && node.Y > parent.Y)
-                return "RL";
-            if (node.X > parent.X && node.Y < parent.Y)
-                return "RL";
-
-            return null;
         }
 
         public override TreeSaver StartTree(TechTreeViewModel techTree = null)

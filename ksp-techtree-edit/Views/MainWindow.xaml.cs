@@ -50,7 +50,7 @@ namespace ksp_techtree_edit.Views
 		}
 
         // OK
-        public void LoadTree(string path, TreeType treeType = TreeType.YongeTech)
+        public void LoadTree(string path, TreeType treeType = TreeType.StockTechTree)
 		{
 			ResetTree();
 
@@ -71,7 +71,7 @@ namespace ksp_techtree_edit.Views
                     break;
 			}
             if (_treeLoader == null)
-                MessageBox.Show("TREELOADER NULL 1");
+                MessageBox.Show("TREELOADER NULL");
             _treeLoader.LoadTree(_config, _treeData);
 			_treeData.LinkNodes();
 			_treeData.WorkspaceViewModel.StatusBarText = "Tree Loaded";
@@ -213,9 +213,9 @@ namespace ksp_techtree_edit.Views
 			Logger.Log("Application closed");
 		}
 
-        private void SaveClick(object sender, RoutedEventArgs e)
+        private void SaveStockTechClick(object sender, RoutedEventArgs e)
         {
-
+            this.Save(new StockTreeSaver());
         }
     }
 }

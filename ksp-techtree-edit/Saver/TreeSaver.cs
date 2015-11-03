@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ksp_techtree_edit.Saver
 {
@@ -60,5 +61,34 @@ namespace ksp_techtree_edit.Saver
         {
             get { return new String('\t', IndentationLevel); }
         }
+
+        protected String FindParentPosition(Point node, Point parent)
+        {
+            if (node.Y == parent.Y && node.X > parent.X)
+                return "RL";
+            if (node.Y == parent.Y && node.X < parent.X)
+                return "LR";
+            if ((node.X == parent.X && node.Y > parent.Y) ||
+                 (Math.Abs(node.X - parent.X) <= 20 && node.Y > parent.Y)
+               //|| (node.X - parent.X && node.Y < parent.Y)
+               )
+                return "TB";
+            if ((node.X == parent.X && node.Y < parent.Y) ||
+                (Math.Abs(node.X - parent.X) <= 20 && node.Y < parent.Y)
+               //|| (node.X - parent.X && node.Y < parent.Y)
+               )
+                return "BT";
+            if (node.X < parent.X && node.Y > parent.Y)
+                return "LR";
+            if (node.X < parent.X && node.Y < parent.Y)
+                return "LR";
+            if (node.X > parent.X && node.Y > parent.Y)
+                return "RL";
+            if (node.X > parent.X && node.Y < parent.Y)
+                return "RL";
+
+            return null;
+        }
+
     }
 }
