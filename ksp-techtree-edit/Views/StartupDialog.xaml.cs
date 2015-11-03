@@ -77,7 +77,7 @@ namespace ksp_techtree_edit.Views
             try
             {
                 mainWindow.LoadTree(dlg.FileName, type);
-                mainWindow.FindParts(type);
+                mainWindow.FindParts();
                 Close();
             }
             catch (Exception exception)

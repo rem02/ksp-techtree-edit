@@ -1,4 +1,7 @@
 ﻿using KerbalParser;
+using ksp_techtree_edit.Controls;
+using ksp_techtree_edit.Models;
+using ksp_techtree_edit.Properties;
 using ksp_techtree_edit.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -11,14 +14,11 @@ namespace ksp_techtree_edit.Loader
     public abstract class TreeLoader
     {
 
-        protected KerbalConfig _config;
-        private TechTreeViewModel _treeData;
+        public abstract void LoadTree(KerbalConfig config, TechTreeViewModel treeData);
 
-        public TechTreeViewModel TreeData { get { return _treeData;  } }
+        public abstract TechNode PopulateFromSource(KerbalNode sourceNode);
 
-        public abstract TechTreeViewModel LoadTree(Dictionary<string, TechNodeViewModel> nameNodeHashtable);
-
-
+        public abstract void PopulateParts(PartCollectionViewModel pc, TechNodeViewModel node);
 
     }
 }

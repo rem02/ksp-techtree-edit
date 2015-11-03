@@ -132,7 +132,9 @@
       <DependentUpon>TechTreeDiagram.xaml</DependentUpon>
     </Compile>
     <Compile Include="IconsEnum.cs" />
+    <Compile Include="Loader\StockTechTreeLoader.cs" />
     <Compile Include="Loader\TreeLoader.cs" />
+    <Compile Include="Loader\YongeTechTreeLoader.cs" />
     <Compile Include="Models\Part.cs" />
     <Compile Include="Models\PartCollection.cs" />
     <Compile Include="Models\TechNode.cs" />

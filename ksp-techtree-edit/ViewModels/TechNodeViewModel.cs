@@ -212,50 +212,50 @@ namespace ksp_techtree_edit.ViewModels
 		#region Helper Methods
 
         // 
-		public void PopulateParts( PartCollectionViewModel pc, TreeType type = TreeType.YongeTech)
-		{
-			switch (type)
-			{
-				case TreeType.YongeTech:
-                    // Create and init parte table with name => partviewmodel
-					var partTable = new Dictionary<string, PartViewModel>();
-					foreach (PartViewModel part in pc.PartCollection)
-					{
-						try
-						{
-							if (!partTable.ContainsKey(part.PartName))
-							{
-								partTable.Add(part.PartName, part);
-							}
-							else
-							{
-								var duplicate = partTable[part.PartName];
-								var existString = String.Format(" - Existing part: {0} ({1})", duplicate.PartName, duplicate.FileName);
-								Logger.Error( "PartLoader: Error while storing part \"{0}\" " + "({1}) into PartCollection - {2}{3}", part.PartName, part.FileName, "Part already exists", existString);
-							}
-						}
-						catch (Exception e)
-						{
-							Logger.Error( "PartLoader: Error while storing part \"{0}\" " +  "({1}) into PartCollection - {2}", part.PartName, part.FileName, e.Message);
-						}
-					}
+		//public void PopulateParts( PartCollectionViewModel pc, TreeType type = TreeType.YongeTech)
+		//{
+		//	switch (type)
+		//	{
+		//		case TreeType.YongeTech:
+  //                  // Create and init parte table with name => partviewmodel
+		//			var partTable = new Dictionary<string, PartViewModel>();
+		//			foreach (PartViewModel part in pc.PartCollection)
+		//			{
+		//				try
+		//				{
+		//					if (!partTable.ContainsKey(part.PartName))
+		//					{
+		//						partTable.Add(part.PartName, part);
+		//					}
+		//					else
+		//					{
+		//						var duplicate = partTable[part.PartName];
+		//						var existString = String.Format(" - Existing part: {0} ({1})", duplicate.PartName, duplicate.FileName);
+		//						Logger.Error( "PartLoader: Error while storing part \"{0}\" " + "({1}) into PartCollection - {2}{3}", part.PartName, part.FileName, "Part already exists", existString);
+		//					}
+		//				}
+		//				catch (Exception e)
+		//				{
+		//					Logger.Error( "PartLoader: Error while storing part \"{0}\" " +  "({1}) into PartCollection - {2}", part.PartName, part.FileName, e.Message);
+		//				}
+		//			}
 
-					foreach (String part in _techNode.Parts)
-					{
-						if (partTable.ContainsKey(part))
-						{
-							_parts.Add(partTable[part]);
-							pc.PartCollection.Remove(partTable[part]);
-						}
-						else
-						{
-							var tmpPart = new Part(part) { Title = part, TechRequired = Id, Category = "(Unknown)" };
-							_parts.Add(new PartViewModel(tmpPart));
-						}
-					}
-					break;
-			}
-		}
+		//			foreach (String part in _techNode.Parts)
+		//			{
+		//				if (partTable.ContainsKey(part))
+		//				{
+		//					_parts.Add(partTable[part]);
+		//					pc.PartCollection.Remove(partTable[part]);
+		//				}
+		//				else
+		//				{
+		//					var tmpPart = new Part(part) { Title = part, TechRequired = Id, Category = "(Unknown)" };
+		//					_parts.Add(new PartViewModel(tmpPart));
+		//				}
+		//			}
+		//			break;
+		//	}
+		//}
 
 		public void RemovePart(PartViewModel part)
 		{
