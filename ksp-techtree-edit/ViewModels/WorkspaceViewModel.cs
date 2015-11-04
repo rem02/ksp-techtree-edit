@@ -18,7 +18,7 @@ namespace ksp_techtree_edit.ViewModels
 			}
 		}
 
-		private string _statusBarText;
+        private string _statusBarText;
 
 		public string StatusBarText
 		{
