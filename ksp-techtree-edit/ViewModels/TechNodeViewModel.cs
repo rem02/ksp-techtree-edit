@@ -6,6 +6,7 @@ using System.Windows;
 using ksp_techtree_edit.Models;
 using ksp_techtree_edit.Util;
 using System.ComponentModel;
+using ksp_techtree_edit.Converters;
 
 namespace ksp_techtree_edit.ViewModels
 {
@@ -134,13 +135,11 @@ namespace ksp_techtree_edit.ViewModels
                 OnPropertyChanged();
             }
         }
-
-        public Icon Icon
+     
+        public IconsEnum Icon
         {
             get
             {
-
-
                 return _techNode.Icon;
             }
             set

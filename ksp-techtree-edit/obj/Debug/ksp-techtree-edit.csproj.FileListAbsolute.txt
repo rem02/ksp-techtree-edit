@@ -121,5 +121,5 @@ D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\StartupDi
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.g.resources
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp_techtree_edit.Properties.Resources.resources
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csproj.GenerateResource.Cache
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\resources\StockTechTree.cfg
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache

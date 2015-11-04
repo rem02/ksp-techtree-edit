@@ -44,7 +44,8 @@ namespace ksp_techtree_edit.Models
 		protected virtual void OnProgress()
 		{
 			var handler = Progress;
-			if (handler != null) handler(this, EventArgs.Empty);
+			if (handler != null)
+                handler(this, EventArgs.Empty);
 		}
 
 		public List<KerbalNode> LoadParts()

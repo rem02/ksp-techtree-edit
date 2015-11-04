@@ -98,11 +98,11 @@ namespace ksp_techtree_edit.Loader
                 int id = Array.FindIndex(IconStringConverter.IconString, row => row == iconString);
                 if (id != -1)
                 {
-                    newNode.Icon = (Icon)id;
+                    newNode.Icon = (IconsEnum)id;
                 }
                 else
                 {
-                    newNode.Icon = Icon.RDicon_generic;
+                    newNode.Icon = IconsEnum.RDicon_generic;
                 }
             }
 

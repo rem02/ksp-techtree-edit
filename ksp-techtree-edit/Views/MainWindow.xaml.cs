@@ -19,11 +19,17 @@ namespace ksp_techtree_edit.Views
 	/// </summary>
 	public partial class MainWindow
 	{
+        // KerblaParser object.
 		private KerbalConfig _config;
+
 		private TechTreeViewModel _treeData;
 
+        // Loader of cfg file
         private TreeLoader _treeLoader = null;
 
+        /**
+         * Constructor
+         */
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -44,14 +50,21 @@ namespace ksp_techtree_edit.Views
 
 		}
 
-        //OK
+        /**
+         * Method for create a new TechTree
+         * Status: OK
+         */
 		public void NewTree()
 		{
 			ResetTree();
 		}
 
-        // OK
-        public void LoadTree(string path, TreeType treeType = TreeType.StockTechTree)
+        /**
+         * Method for load tree
+         * Status: OK
+         * Note: if you add a new treeLoader, update the switch...
+         */
+        public void LoadTree(string path, TreeType treeType = TreeType.StockTechTree) 
 		{
 			ResetTree();
 
@@ -61,7 +74,6 @@ namespace ksp_techtree_edit.Views
 			}
             var parser = new Parser();
             _config = parser.ParseConfig(path);
-            // Here if you add a new treeLoader
 			switch (treeType)
 			{
                 case TreeType.StockTechTree:
@@ -70,57 +82,19 @@ namespace ksp_techtree_edit.Views
                 case TreeType.YongeTech:
                     _treeLoader = new YongeTechTreeLoader();
                     break;
+                default:
+                    throw new Exception("The techtree's file format is not reconized !");
+
 			}
-            if (_treeLoader == null)
-                MessageBox.Show("TREELOADER NULL");
             _treeLoader.LoadTree(_config, _treeData);
 			_treeData.LinkNodes();
 			_treeData.WorkspaceViewModel.StatusBarText = "Tree Loaded";
 		}
 
-        //OK
-        //private void LoadYongeTree(Dictionary<string, TechNodeViewModel> nameNodeHashtable)
-        //{
-        //    var techNodes = _config.First(child => child.Name == "TechTree").Children.Where(node => node.Name == "RDNode").ToArray();
-
-        //    foreach (KerbalNode node in techNodes.Where(kerbalNode => kerbalNode.Values.ContainsKey("nodepart"))) {
-        //        var v = node.Values;
-        //        var id = v["id"].First();
-        //        TechNodeViewModel techNodeViewModel;
-        //        if (nameNodeHashtable.ContainsKey(id))
-        //        {
-        //            techNodeViewModel = nameNodeHashtable[id];
-        //        }
-        //        else
-        //        {
-        //            techNodeViewModel = new TechNodeViewModel();
-        //            nameNodeHashtable.Add(id, techNodeViewModel);
-        //        }
-        //        techNodeViewModel.TechNode.PopulateFromSource(node);
-
-        //        // Find parent
-        //        foreach (KerbalNode parentNode in node.Children.Where(child => child.Name == "Parent"))
-        //        {
-        //            var parentKeyValuePairs = parentNode.Values.Where(pair => pair.Key == "parentID");
-        //            var parents = new List<string>();
-        //            foreach (var parentKeyValuePair in parentKeyValuePairs)
-        //            {
-        //                parents.Add( parentKeyValuePair.Value.First() );
-        //            }
-        //            foreach (var parent in parents.Where(parent => !nameNodeHashtable.ContainsKey(parent)))
-        //            {
-        //                nameNodeHashtable.Add(parent, new TechNodeViewModel());
-        //            }
-        //            foreach (var parent in parents.Where(parent => !String.IsNullOrEmpty(parent) && nameNodeHashtable.ContainsKey(parent)))
-        //            {
-        //                techNodeViewModel.Parents.Add(nameNodeHashtable[parent]);
-        //            }
-        //        }
-        //        _treeData.TechTree.Add(techNodeViewModel);
-
-        //    }
-        //}
-
+        /**
+         * Method for initialize de partCollectionModelView
+         * Status: OK
+         */
         public void FindParts()
         {
             var partCollectionViewModel = PartsListBox.DataContext as PartCollectionViewModel;
@@ -133,6 +107,7 @@ namespace ksp_techtree_edit.Views
             if (sidebar == null)
                 return;
             sidebar.PartCollectionViewModel = partCollectionViewModel;
+
             _treeData.PartCollectionViewModel = partCollectionViewModel;
             foreach (var node in _treeData.TechTree)
             {
@@ -140,9 +115,12 @@ namespace ksp_techtree_edit.Views
             }
 
             PartsListBox.AddPartButton.DataContext = _treeData;
-
         }
 
+        /**
+         * Method for reset a techtree
+         * Status: OK
+         */
         private void ResetTree()
 		{
 			_treeData.TechTree.Clear();
@@ -153,14 +131,21 @@ namespace ksp_techtree_edit.Views
 			partCollection.PartCollection.Clear();
 		}
 
-		private void LoadButtonClick(object sender, RoutedEventArgs e)
+        /**
+         * Method for show the startup dialog
+         * Status: OK
+         */
+		private void MainWindow_LoadButtonClick(object sender, RoutedEventArgs e)
 		{
 			var dlg = new StartupDialog { Owner = this };
 			dlg.ShowDialog();
 		}
 
-        //OK
-        private void Save(TreeSaver saver)
+        /**
+         * Method for show the save dialog and the techtree
+         * Status: OK
+         */
+        private void Save(TreeSaver treesaver)
         {
             var dlg = new SaveFileDialog
             {
@@ -170,56 +155,83 @@ namespace ksp_techtree_edit.Views
                 AddExtension = true,
             };
             var result = dlg.ShowDialog();
-            if (result == false)
-                return;
-           // var saver = new TechManagerSaver();
-            try
-            {
-                saver.Save(_treeData, dlg.FileName);
-                //_treeData.Save(saver, dlg.FileName);
-            }
-            catch (Exception)
-            {
-                _treeData.WorkspaceViewModel.StatusBarText = "Failed saving to file..";
-            }
+            if (result==true) { 
+                try
+                {
+                    treesaver.Save(_treeData, dlg.FileName);
+                    _treeData.WorkspaceViewModel.StatusBarText = "saving to file... done";
+                }
+                catch (Exception)
+                {
+                    _treeData.WorkspaceViewModel.StatusBarText = "Failed saving to file..";
+                }
+            } 
         }
 
-        //OK        
-        private void SaveYongeTechClick(object sender, RoutedEventArgs e)
+        /**
+         * Method for save the techtree in Stock format
+         * Status: OK
+         */
+        private void MainWindow_SaveStockTechClick(object sender, RoutedEventArgs e)
+        {
+            this.Save(new StockTreeSaver());
+        }
+
+        /**
+         * Method for save the techtree in Stock YongeTech
+         * Status: OK
+         */
+        private void MainWindow_SaveYongeTechClick(object sender, RoutedEventArgs e)
         {
             this.Save(new YongeTechSaver());
         }
 
-        private void OnLoaded(object sender, RoutedEventArgs e)
+        /**
+         * Method for OnLoaded event
+         * Status: OK
+         */
+        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
 		{
 			var dlg = new StartupDialog { Owner = this };
 			dlg.ShowDialog();
 		}
 
-		private void DeleteOnExecuted(object sender, ExecutedRoutedEventArgs e)
+        /**
+         * Method for OnClosed event
+         * Status: OK
+         */
+        private void MainWindow_OnClosed(object sender, EventArgs e)
+        {
+            Logger.Log("Application closed");
+        }
+
+        /**
+         * Method for KeyBinding delete command
+         * Status: OK
+         */
+        private void MainWindow_DeleteOnExecuted(object sender, ExecutedRoutedEventArgs e)
 		{
 			_treeData.DeleteNode(_treeData.WorkspaceViewModel.SelectedNode);
 		}
 
-		private void DeleteOnCanExecute(object sender, CanExecuteRoutedEventArgs e)
+        /**
+         * Method for KeyBinding delete command
+         * Status: OK
+         */
+        private void MainWindow_DeleteOnCanExecute(object sender, CanExecuteRoutedEventArgs e)
 		{
 			e.CanExecute = _treeData.WorkspaceViewModel.SelectedNode != null;
 		}
 
-		private void HelpClick(object sender, RoutedEventArgs e)
+        /**
+         * Method for show the helpdialog
+         * Status: OK        
+         */
+        private void MainWindow_HelpClick(object sender, RoutedEventArgs e)
 		{
 			var dlg = new HelpDialog { Owner = this };
 			dlg.ShowDialog();
 		}
 
-		private void OnClosed(object sender, EventArgs e)
-		{
-			Logger.Log("Application closed");
-		}
-
-        private void SaveStockTechClick(object sender, RoutedEventArgs e)
-        {
-            this.Save(new StockTreeSaver());
-        }
     }
 }

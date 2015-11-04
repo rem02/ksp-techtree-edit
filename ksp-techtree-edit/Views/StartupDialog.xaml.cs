@@ -16,20 +16,30 @@ namespace ksp_techtree_edit.Views
 	/// </summary>
 	public partial class StartupDialog : INotifyPropertyChanged
 	{
-		private bool _canLoad;
+
+        #region Members
+
+        // Boolean for enble the button
+        private bool _canLoad;
 
 		public bool CanLoad
 		{
 			get { return _canLoad; }
 			set
 			{
-				if (_canLoad == value) return;
+				if (_canLoad == value)
+                    return;
 				_canLoad = value;
 				OnPropertyChanged();
 			}
 		 }
 
-		public StartupDialog()
+        #endregion
+
+        /**
+         * Constructor
+         */
+        public StartupDialog()
 		{
 			try
 			{
@@ -47,19 +57,32 @@ namespace ksp_techtree_edit.Views
 		}
 
         /**
-         * TODO check is ksp directory
+         * Method for setup the KSP installation
+         * Status: OK
          */
-		private void SetKSPFolder(object sender, RoutedEventArgs e)
+		private void StartupDialog_SetKSPFolder(object sender, RoutedEventArgs e)
 		{
 			var dlg = new CommonOpenFileDialog { Title = "Select your KSP installation folder", IsFolderPicker = true };
-			var result = dlg.ShowDialog();       
-			if (result != CommonFileDialogResult.Ok)
-                return;
-			Settings.Default.KspPath = dlg.FileName;
-			Settings.Default.Save();
-			CanLoad = true;
+			var result = dlg.ShowDialog();
+            if (result == CommonFileDialogResult.Ok)
+            {
+                if (dlg.FileName != null && dlg.FileName != "" && Directory.Exists(dlg.FileName + "/GameData"))
+                {
+                    Settings.Default.KspPath = dlg.FileName;
+                    Settings.Default.Save();
+                    CanLoad = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("The directory is not KSP directory. Please select your KSP installation folder !");
+            }
 		}
 
+        /**
+         * Generic method for loading a techtree
+         * Status: OK
+         */
         private void Load(String title, TreeType type) {
             var mainWindow = Owner as MainWindow;
             if (mainWindow == null)
@@ -82,17 +105,34 @@ namespace ksp_techtree_edit.Views
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                MessageBox.Show(exception.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
                 CanLoad = true;
             }
         }
 
-        private void LoadYongeTree(object sender, RoutedEventArgs e)
+        /**
+         * Method for loading a techtree in stock format
+         * Status: OK
+         */
+        private void StartupDialog_LoadStockTree(object sender, RoutedEventArgs e)
+        {
+            Load("Select TechMananger tree to load", TreeType.StockTechTree);
+        }
+
+        /**
+         * Method for loading a techtree in yongeTech format
+         * Status: OK
+         */
+        private void StartupDialog_LoadYongeTree(object sender, RoutedEventArgs e)
         {
             Load("Select TechMananger tree to load", TreeType.YongeTech);
         }
 
-		private void NewStockTree(object sender, RoutedEventArgs e)
+        /**
+         * Method for create a new trechtree with stock techtree model.
+         * Status: OK
+         */
+        private void StartupDialog_NewStockTree(object sender, RoutedEventArgs e)
 		{
 			var mainWindow = Owner as MainWindow;
 			if (mainWindow == null)
@@ -106,12 +146,16 @@ namespace ksp_techtree_edit.Views
 			}
 			catch (Exception exception)
 			{
-				MessageBox.Show(exception.Message,"Can't find the cfg file !", MessageBoxButton.OK, MessageBoxImage.Error);
+				MessageBox.Show(exception.Message,"", MessageBoxButton.OK, MessageBoxImage.Error);
 				CanLoad = true;
 			}
 		}
 
-		private void NewBlankTree(object sender, RoutedEventArgs e)
+        /**
+         * Method for create a empty techtree
+         * Status: OK
+         */
+        private void StartupDialog_NewBlankTree(object sender, RoutedEventArgs e)
 		{
 			var mainWindow = Owner as MainWindow;
 			if (mainWindow == null)
@@ -129,5 +173,6 @@ namespace ksp_techtree_edit.Views
 			var handler = PropertyChanged;
 			if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
 		}
-	}
+
+    }
 }

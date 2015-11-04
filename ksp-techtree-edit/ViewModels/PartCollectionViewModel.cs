@@ -34,11 +34,15 @@ namespace ksp_techtree_edit.ViewModels
 			PartCollection = new ObservableCollection<PartViewModel>();
 		}
 
-		#endregion Construtctors
+        #endregion Construtctors
 
-		#region Methods
+        #region Methods
 
-		public void LoadParts(string path)
+        /**
+         * Method for load all part.
+         * Status: OK
+         */
+        public void LoadParts(string path)
 		{
 			var partCollection = new PartCollection(path);
 			partCollection.LoadParts();
@@ -50,13 +54,21 @@ namespace ksp_techtree_edit.ViewModels
 			}
 		}
 
+        /**
+         * Method for add a part in node and remove the par in partcatalog.
+         * Status: OK
+         */
 		public void AddPartToNode(PartViewModel part, TechNodeViewModel node)
 		{
 			node.AddPart(part);
 			PartCollection.Remove(part);
 		}
 
-		public void RemovePartFromNode(PartViewModel part, TechNodeViewModel node)
+        /**
+         * Method for remove a part in node and add the par in partcatalog.
+         * Status: OK
+         */
+        public void RemovePartFromNode(PartViewModel part, TechNodeViewModel node)
 		{
 			node.RemovePart(part);
 			PartCollection.Add(part);

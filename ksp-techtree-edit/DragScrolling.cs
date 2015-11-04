@@ -24,12 +24,8 @@ namespace ksp_techtree_edit
 			set { SetValue(IsEnabledProperty, value); }
 		}
 
-		public static readonly DependencyProperty IsEnabledProperty =
-			DependencyProperty.RegisterAttached(
-			                                    "IsEnabled",
-			                                    typeof (bool),
-			                                    typeof (DragScrolling),
-			                                    new UIPropertyMetadata(false, IsEnabledChanged));
+		public static readonly DependencyProperty IsEnabledProperty = DependencyProperty.RegisterAttached( "IsEnabled",  typeof (bool),  typeof (DragScrolling),
+			                                                                                                new UIPropertyMetadata(false, IsEnabledChanged));
 
 		private static readonly Dictionary<object, MouseCapture> Captures = new Dictionary<object, MouseCapture>();
 

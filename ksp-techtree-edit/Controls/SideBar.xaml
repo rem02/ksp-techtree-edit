@@ -76,7 +76,9 @@
                     </ScrollViewer>
                 </Border>
                 <GridSplitter Grid.Row="1" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
+                
                 <xctk:PropertyGrid
+                    AutoGenerateProperties="False"
 					Grid.Row="2"
 					Name="NodePropertyGrid"
 					IsCategorized="False"

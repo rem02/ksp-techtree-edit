@@ -9,6 +9,9 @@ using System.Windows;
 
 namespace ksp_techtree_edit.Saver
 {
+    /// <summary>
+    /// abstract class for define a TreeSaver. 
+    /// </summary>    
     public abstract class TreeSaver
     {
         private readonly List<string> _output = new List<string>();
@@ -62,6 +65,9 @@ namespace ksp_techtree_edit.Saver
             get { return new String('\t', IndentationLevel); }
         }
 
+        /**
+         * Method for find de position of node 
+         */
         protected String FindParentPosition(Point node, Point parent)
         {
             if (node.Y == parent.Y && node.X > parent.X)

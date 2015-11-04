@@ -1,61 +1,65 @@
 using System;
+using System.ComponentModel;
 
 namespace ksp_techtree_edit
 {
-	public enum Icon
+    /**
+     * Enum for techNodeViewModel
+     */
+    public enum IconsEnum
 	{
+        RDicon_generic,
         RDicon_start,
-        RDicon_basicrocketry,               //RDicon_rocketry-basic
-        RDicon_generalrocketry,             //RDicon_rocketry-general
+        RDicon_basicrocketry,              
+        RDicon_generalrocketry,           
         RDicon_survivability,
         RDicon_stability,
-        RDicon_advrocketry,                 //RDicon_rocketry-advanced
-        RDicon_sciencetech,                 //RDicon_scienceTech
-        RDicon_generalconstruction,         //RDicon_construction-general
-        RDicon_flightcontrol,               //RDicon_control-flight
-        RDicon_advconstruction,             //RDicon_construction-advanced
-        RDicon_advflightcontrol,            //RDicon_control-flight-advanced
+        RDicon_advrocketry,                 
+        RDicon_sciencetech,                 
+        RDicon_generalconstruction,         
+        RDicon_flightcontrol,               
+        RDicon_advconstruction,             
+        RDicon_advflightcontrol,            
         RDicon_electrics,
         RDicon_evatech,
-        RDicon_advlanding,                  //RDicon_landing-advanced
-        RDicon_heavyrocketry,               //RDicon_rocketry-heavy
+        RDicon_advlanding,             
+        RDicon_heavyrocketry,              
         RDicon_fuelsystems,
         RDicon_aerodynamicSystems,
-        RDicon_advexploration,              //RDicon_exploration-advanced
+        RDicon_advexploration,             
         RDicon_emgineering101,
-        RDicon_precisionengineering,        //RDicon_engineering-precision
-        RDicon_advelectrics,                //RDicon_electrics-advanced
+        RDicon_precisionengineering,       
+        RDicon_advelectrics,                
         RDicon_specializedcontrol,
-        RDicon_heavierrocketry,             //RDicon_rocketry-heavier 
+        RDicon_heavierrocketry,             
         RDicon_specializedconstruction,
         RDicon_landing,
-        RDicon_supersonicflight,            //RDicon_flight-supersonic
-        RDicon_generic,
+        RDicon_supersonicflight,           
         RDicon_composites,
-        RDicon_fieldscience,                //RDicon_science-field
-        RDicon_nuclearpropulsion,           //RDicon_propulsion-nuclear
-        RDicon_ionpropulsion,               //RDicon_propulsion-ion
-        RDicon_largeelectrics,              //RDicon_electrics-large
+        RDicon_fieldscience,              
+        RDicon_nuclearpropulsion,     
+        RDicon_ionpropulsion,               
+        RDicon_largeelectrics,            
         RDicon_electronics,
         RDicon_highaltitudeflight,
-        RDicon_unmannedtech,                //RDicon_unmannedTech
-        RDicon_largecontrol,                //RDicon_control-large
-        RDicon_advmetalworks,               //RDicon_metalworks-advanced
-        RDicon_advaerodynamics,             //RDicon_aerodynamics-advanced
+        RDicon_unmannedtech,               
+        RDicon_largecontrol,          
+        RDicon_advmetalworks,           
+        RDicon_advaerodynamics,         
         RDicon_metamaterials,
-        RDicon_heavyaerodynamics,           //RDicon_aerodynamics-heavy
-        RDicon_veryheavyrocketry,           //RDicon_rocketry-veryHeavy
-        RDicon_advancedmotors,              //RDicon_motors-advanced
-        RDicon_hypersonicflight,            //RDicon_flight-hypersonic
-        RDicon_specializedelectrics,        //RDicon_electrics-specialized
-        RDicon_advunmanned,                 //RDicon_unmanned-advanced
-        RDicon_advsciencetech,              //RDicon_scienceTech-advanced
-        RDicon_experimentalrocketry,        //RDicon_rocketry-experimental
+        RDicon_heavyaerodynamics,         
+        RDicon_veryheavyrocketry,      
+        RDicon_advancedmotors,             
+        RDicon_hypersonicflight,        
+        RDicon_specializedelectrics,       
+        RDicon_advunmanned,                 
+        RDicon_advsciencetech,             
+        RDicon_experimentalrocketry,       
         RDicon_aerospaceTech,
-        RDicon_experimentalelectrics,       //RDicon_electrics-experimental
-        RDicon_experimentalaerodynamics,    //RDicon_aerodynamics-experimental
-        RDicon_experimentalscience,         //RDicon_science-experimental
-        RDicon_experimentalmotors,          //RDicon_motors-experimental
+        RDicon_experimentalelectrics,       
+        RDicon_experimentalaerodynamics,    
+        RDicon_experimentalscience,         
+        RDicon_experimentalmotors,          
         RDicon_robotics,
         RDicon_automation,
         RDicon_nanolathing,
@@ -70,13 +74,16 @@ namespace ksp_techtree_edit
         RDicon_propulsionSystems,
         RDicon_basicprobes,
         RDicon_highaltitudepropulsion,
-        RDicon_largeprobes,          
+        RDicon_largeprobes          
     }
 
     public class IconStringConverter
     {
-
+        /**
+         * Value for icon in cfg file
+         */
         public static String[] IconString = {
+            "RDicon_generic",
             "RDicon_start",
             "RDicon_rocketry-basic",
             "RDicon_rocketry-general",
@@ -103,7 +110,6 @@ namespace ksp_techtree_edit
             "RDicon_construction-specialized",
             "RDicon_landing",
             "RDicon_flight-supersonic",
-            "RDicon_generic",
             "RDicon_composites",
             "RDicon_science-field",
             "RDicon_propulsion-nuclear",
@@ -147,12 +153,6 @@ namespace ksp_techtree_edit
 
             
         };
-
-        public static String[] IconFile = {
-            ""
-
-        };
-
 
     }
         
