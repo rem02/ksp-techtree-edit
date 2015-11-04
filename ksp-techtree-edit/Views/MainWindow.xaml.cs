@@ -41,6 +41,7 @@ namespace ksp_techtree_edit.Views
 
 			ContentGrid.DataContext = workspaceViewModel;
 			DataContext = workspaceViewModel;
+
 		}
 
         //OK
@@ -122,7 +123,7 @@ namespace ksp_techtree_edit.Views
 
         public void FindParts()
         {
-            var partCollectionViewModel = MainSideBar.PartsListBox.DataContext as PartCollectionViewModel;
+            var partCollectionViewModel = PartsListBox.DataContext as PartCollectionViewModel;
 
             if (partCollectionViewModel == null)
                 return;
@@ -137,13 +138,16 @@ namespace ksp_techtree_edit.Views
             {
                 _treeLoader.PopulateParts(partCollectionViewModel, node);
             }
+
+            PartsListBox.AddPartButton.DataContext = _treeData;
+
         }
 
         private void ResetTree()
 		{
 			_treeData.TechTree.Clear();
 			_treeData.Connections.Clear();
-			var partCollection = MainSideBar.PartsListBox.DataContext as PartCollectionViewModel;
+			var partCollection = PartsListBox.DataContext as PartCollectionViewModel;
 			if (partCollection == null)
                 return;
 			partCollection.PartCollection.Clear();

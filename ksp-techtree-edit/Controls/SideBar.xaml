@@ -19,9 +19,8 @@
                     <RowDefinition Height="7"/>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="7"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="7"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+
                 </Grid.RowDefinitions>
                 <Border Grid.Row="0" BorderBrush="LawnGreen" BorderThickness="0,0,0,2">
                     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
@@ -95,7 +94,8 @@
                         <xctk:PropertyDefinition TargetProperties="TechNode" IsBrowsable="False"/>
                         <xctk:PropertyDefinition TargetProperties="Parents" IsBrowsable="False"/>
                         <xctk:PropertyDefinition TargetProperties="Parts" IsBrowsable="False"/>
-
+                        <xctk:PropertyDefinition TargetProperties="ZLayer" IsBrowsable="False"/>
+                        
                         <xctk:PropertyDefinition TargetProperties="Id" DisplayOrder="0"/>
                         <xctk:PropertyDefinition TargetProperties="NodePart" DisplayOrder="1"/>
                         <xctk:PropertyDefinition TargetProperties="Title" DisplayOrder="2"/>
@@ -104,15 +104,14 @@
                         <xctk:PropertyDefinition TargetProperties="Icon" DisplayOrder="5"/>
                         <xctk:PropertyDefinition TargetProperties="Scale" DisplayOrder="6" />
                         <xctk:PropertyDefinition TargetProperties="Pos" DisplayOrder="7"/>
-                        <xctk:PropertyDefinition TargetProperties="ZLayer" IsBrowsable="False"/>
+                        
 
                         <xctk:PropertyDefinition TargetProperties="AnyParent,HideIfEmpty,HideIfNoBranchParts" DisplayOrder="9"/>
                     </xctk:PropertyGrid.PropertyDefinitions>
                 </xctk:PropertyGrid>
                 <GridSplitter Grid.Row="3" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
                 <controls:NodePartsList Grid.Row="4" x:Name="NodePartsListBox"/>
-                <GridSplitter Grid.Row="5" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
-                <controls:PartCatalog Grid.Row="6" x:Name="PartsListBox" />
+
             </Grid>
         </Border>
     </DockPanel>

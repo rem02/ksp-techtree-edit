@@ -17,7 +17,7 @@ namespace ksp_techtree_edit.Controls
 
 			NodePartsListBox.DataContext = techTreeViewModel;
 
-			PartsListBox.AddPartButton.DataContext = techTreeViewModel;
+//			PartsListBox.AddPartButton.DataContext = techTreeViewModel;
 		}
 	}
 }

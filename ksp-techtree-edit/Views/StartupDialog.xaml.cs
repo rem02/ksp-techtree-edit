@@ -92,10 +92,6 @@ namespace ksp_techtree_edit.Views
             Load("Select TechMananger tree to load", TreeType.YongeTech);
         }
 
-
-        /**
-         * TODO check if exist stock.cfg 
-         */
 		private void NewStockTree(object sender, RoutedEventArgs e)
 		{
 			var mainWindow = Owner as MainWindow;
@@ -110,7 +106,7 @@ namespace ksp_techtree_edit.Views
 			}
 			catch (Exception exception)
 			{
-				Console.WriteLine(exception.Message);
+				MessageBox.Show(exception.Message,"Can't find the cfg file !", MessageBoxButton.OK, MessageBoxImage.Error);
 				CanLoad = true;
 			}
 		}
