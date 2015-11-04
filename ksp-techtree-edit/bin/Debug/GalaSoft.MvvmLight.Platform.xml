@@ -125,6 +125,11 @@
             The <see cref="P:GalaSoft.MvvmLight.Command.EventToCommand.EventArgsConverterParameter"/> dependency property's name.
             </summary>
         </member>
+        <member name="F:GalaSoft.MvvmLight.Command.EventToCommand.AlwaysInvokeCommandPropertyName">
+            <summary>
+            The <see cref="P:GalaSoft.MvvmLight.Command.EventToCommand.AlwaysInvokeCommand"/> dependency property's name.
+            </summary>
+        </member>
         <member name="F:GalaSoft.MvvmLight.Command.EventToCommand.CommandParameterProperty">
             <summary>
             Identifies the <see cref="P:GalaSoft.MvvmLight.Command.EventToCommand.CommandParameter"/> dependency property
@@ -164,6 +169,11 @@
         <member name="F:GalaSoft.MvvmLight.Command.EventToCommand.EventArgsConverterParameterProperty">
             <summary>
             Identifies the <see cref="P:GalaSoft.MvvmLight.Command.EventToCommand.EventArgsConverterParameter"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:GalaSoft.MvvmLight.Command.EventToCommand.AlwaysInvokeCommandProperty">
+            <summary>
+            Identifies the <see cref="P:GalaSoft.MvvmLight.Command.EventToCommand.AlwaysInvokeCommand"/> dependency property.
             </summary>
         </member>
         <member name="M:GalaSoft.MvvmLight.Command.EventToCommand.Invoke">
@@ -240,6 +250,12 @@
             Gets or sets a parameters for the converter used to convert the EventArgs when using
             <see cref="P:GalaSoft.MvvmLight.Command.EventToCommand.PassEventArgsToCommand"/>. If PassEventArgsToCommand is false,
             this property is never used. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Command.EventToCommand.AlwaysInvokeCommand">
+            <summary>
+            Gets or sets a value indicating if the command should be invoked even
+            if the attached control is disabled. This is a dependency property.
             </summary>
         </member>
         <member name="T:GalaSoft.MvvmLight.Command.IEventArgsConverter">
