@@ -65,6 +65,7 @@
 					IsCategorized="False"
 					ShowSearchBox="False"
 					ShowSortOptions="False"
+                    ShowSummary="false"
 					ShowTitle="True"
 					SelectedObjectName="{Binding WorkspaceViewModel.SelectedNode.Title}"
 					SelectedObject="{Binding WorkspaceViewModel.SelectedNode}"

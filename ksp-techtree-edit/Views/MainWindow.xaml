@@ -7,8 +7,8 @@
 		xmlns:controls="clr-namespace:ksp_techtree_edit.Controls"
 		xmlns:viewModels="clr-namespace:ksp_techtree_edit.ViewModels"
 		mc:Ignorable="d" x:Class="ksp_techtree_edit.Views.MainWindow"
-        Title="KSP Tech Tree Edit" Height="513" Width="718"
-		MinWidth="700" MinHeight="500" Loaded="OnLoaded"
+        Title="KSP Tech Tree Edit" Height="800" Width="1280"
+		MinWidth="1024" MinHeight="800" Loaded="OnLoaded"
 		Closed="OnClosed"
 		WindowStartupLocation="CenterScreen">
 	<Window.InputBindings>
