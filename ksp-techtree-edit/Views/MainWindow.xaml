@@ -30,8 +30,11 @@
 
 		<Menu Grid.Row="0" Margin="0,0,0,5">
             <MenuItem Header="Load/New" Click="MainWindow_LoadButtonClick"/>
-            <MenuItem Header="Save(Stock)" Click="MainWindow_SaveStockTechClick"/>
-            <MenuItem Header="Save(YongeTech)" Click="MainWindow_SaveYongeTechClick"/>
+            <MenuItem Header="Save (Stock)" Click="MainWindow_SaveStockTechClick"/>
+            <MenuItem Header="Save (YongeTech)" Click="MainWindow_SaveYongeTechClick"/>
+            
+            
+            
             <MenuItem Header="?" Click="MainWindow_HelpClick"/>
 		</Menu>
 

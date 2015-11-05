@@ -30,11 +30,6 @@ namespace ksp_techtree_edit.Models
 			Directory = new DirectoryInfo(path);
 		}
 
-		public PartCollection(DirectoryInfo directory)
-		{
-			Directory = directory;
-		}
-
 		#endregion Constructors
 
 		#region Methods
@@ -66,12 +61,10 @@ namespace ksp_techtree_edit.Models
 					Logger.Error(e.Message);
 				}
 				if (parts == null || parts.Count < 1) continue;
-				foreach (var p in parts.Where(
-				                              p => !partlist.Contains(p)
-				                                   && p.Name == "PART"))
+				foreach (var p in parts.Where(p => !partlist.Contains(p) && p.Name == "PART"))
 				{
-					if (!p.Values.ContainsKey("name")) continue;
-
+					if (!p.Values.ContainsKey("name"))
+                        continue;
 					var part = new Part(p.Values["name"].First());
 					part.PopulateFromSource(p);
 					part.FileName = file.FullName;

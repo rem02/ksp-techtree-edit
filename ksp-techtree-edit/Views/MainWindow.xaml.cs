@@ -101,7 +101,8 @@ namespace ksp_techtree_edit.Views
 
             if (partCollectionViewModel == null)
                 return;
-            partCollectionViewModel.LoadParts(Settings.Default.KspPath);
+            // Load squad parts
+            partCollectionViewModel.LoadParts(Settings.Default.KspPath+"/GameData/Squad");
 
             var sidebar = MainSideBar.DataContext as TechTreeViewModel;
             if (sidebar == null)

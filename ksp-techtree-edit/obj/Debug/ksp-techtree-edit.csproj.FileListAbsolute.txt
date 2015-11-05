@@ -124,3 +124,4 @@ D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree E
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\StockTechTree.cfg
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\MyPartCatalog.g.cs
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\MyPartCatalog.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache

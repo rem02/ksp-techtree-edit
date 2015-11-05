@@ -19,17 +19,17 @@ namespace ksp_techtree_edit.Models
 			{
 				if (value == _fileName) return;
 				_fileName = value;
-				try
-				{
-					ModName = FindModName();
-				}
-				catch
-				{
-					ModName = "Unknown";
-					Logger.Error("Couldn't auto-detect mod for {0}", value);
-				}
-			}
-		}
+                try
+                {
+                    ModName = FindModName();
+                }
+                catch
+                {
+                    ModName = "Unknown";
+                    Logger.Error("Couldn't auto-detect mod for {0}", value);
+                }
+            }
+        }
 
 		public string PartName { get; set; }
 		public string Title { get; set; }
