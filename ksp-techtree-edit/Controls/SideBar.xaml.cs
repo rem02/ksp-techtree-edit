@@ -1,4 +1,5 @@
 using ksp_techtree_edit.ViewModels;
+using System.Windows.Forms;
 
 namespace ksp_techtree_edit.Controls
 {
@@ -9,6 +10,7 @@ namespace ksp_techtree_edit.Controls
 	{
 		public SideBar()
 		{
+
 			InitializeComponent();
 			var techTreeViewModel = DataContext as TechTreeViewModel;
 
@@ -18,8 +20,8 @@ namespace ksp_techtree_edit.Controls
 			NodePartsListBox.DataContext = techTreeViewModel;
 
             
-            
 
-		}
+        }
+
 	}
 }

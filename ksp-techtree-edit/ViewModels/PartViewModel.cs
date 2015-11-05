@@ -135,7 +135,7 @@ namespace ksp_techtree_edit.ViewModels
 
 		public PartViewModel(Part part)
 		{
-			Part = part;
+			Part = new Part(part);
 		}
 
 		#endregion Constructors

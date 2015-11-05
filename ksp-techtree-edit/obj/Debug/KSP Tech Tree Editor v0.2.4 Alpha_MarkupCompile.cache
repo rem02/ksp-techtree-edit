@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\App.xaml
-7-714024791
+8-569899660
 
-3711668238
-79-645686645
-Controls\NodePartsList.xaml;Controls\PartCatalog.xaml;Controls\SideBar.xaml;Controls\TechTreeDiagram.xaml;Views\HelpDialog.xaml;Views\MainWindow.xaml;Views\StartupDialog.xaml;
+38-1151453279
+821281254606
+Controls\MyPartCatalog.xaml;Controls\NodePartsList.xaml;Controls\PartCatalog.xaml;Controls\SideBar.xaml;Controls\TechTreeDiagram.xaml;Views\HelpDialog.xaml;Views\MainWindow.xaml;Views\StartupDialog.xaml;
 
 False
 

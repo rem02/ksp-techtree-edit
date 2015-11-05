@@ -44,7 +44,7 @@
 				<ColumnDefinition Width="300" MinWidth="200"/>
 			</Grid.ColumnDefinitions>
 
-            <controls:PartCatalog x:Name="PartsListBox" />
+            <controls:MyPartCatalog x:Name="PartsListBox" />
             
             <GridSplitter Grid.Column="1" Width="5" Margin="2,0,2,0" HorizontalAlignment="Center" Background="Black"/>
 

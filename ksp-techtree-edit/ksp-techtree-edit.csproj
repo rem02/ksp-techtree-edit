@@ -82,6 +82,9 @@
       <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.Presentation" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
@@ -131,6 +134,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\MyPartCatalog.xaml.cs">
+      <DependentUpon>MyPartCatalog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\NodePartsList.xaml.cs">
       <DependentUpon>NodePartsList.xaml</DependentUpon>
     </Compile>
@@ -174,6 +180,10 @@
     <Compile Include="Views\StartupDialog.xaml.cs">
       <DependentUpon>StartupDialog.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\MyPartCatalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\NodePartsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -264,10 +274,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\stocknodes.txt" />
+    <Resource Include="jeb.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="jeb.ico" />
+    <Resource Include="stocknodes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

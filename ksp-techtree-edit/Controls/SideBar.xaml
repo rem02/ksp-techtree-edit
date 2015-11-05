@@ -78,8 +78,6 @@
                 </Border>
                 <GridSplitter Grid.Row="1" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
 
-
-                
                 <xctk:PropertyGrid
                     AutoGenerateProperties="False"
 					Grid.Row="2"
@@ -100,7 +98,7 @@
                         <xctk:PropertyDefinition TargetProperties="Parents" IsBrowsable="False"/>
                         <xctk:PropertyDefinition TargetProperties="Parts" IsBrowsable="False"/>
                         <xctk:PropertyDefinition TargetProperties="ZLayer" IsBrowsable="False"/>
-                        
+
                         <xctk:PropertyDefinition TargetProperties="Id" DisplayOrder="0"/>
                         <xctk:PropertyDefinition TargetProperties="NodePart" DisplayOrder="1"/>
                         <xctk:PropertyDefinition TargetProperties="Title" DisplayOrder="2"/>
@@ -109,11 +107,13 @@
                         <xctk:PropertyDefinition TargetProperties="Icon" DisplayOrder="5"/>
                         <xctk:PropertyDefinition TargetProperties="Scale" DisplayOrder="6" />
                         <xctk:PropertyDefinition TargetProperties="Pos" DisplayOrder="7"/>
-                        
-
-                        <xctk:PropertyDefinition TargetProperties="AnyParent,HideIfEmpty,HideIfNoBranchParts" DisplayOrder="9"/>
+                        <xctk:PropertyDefinition TargetProperties="AnyToUnlock" DisplayOrder="8"/>
+                        <xctk:PropertyDefinition TargetProperties="HideEmpty" DisplayOrder="9"/>
+                        <xctk:PropertyDefinition TargetProperties="HideIfNoBranchParts" DisplayOrder="10"/>
                     </xctk:PropertyGrid.PropertyDefinitions>
                 </xctk:PropertyGrid>
+
+
                 <GridSplitter Grid.Row="3" Height="10" HorizontalAlignment="Stretch" Margin="0,2,0,2" Background="Black"/>
                 <controls:NodePartsList Grid.Row="4" x:Name="NodePartsListBox"/>
 

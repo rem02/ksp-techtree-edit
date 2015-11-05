@@ -53,11 +53,24 @@ namespace ksp_techtree_edit.Models
 			PartName = name;
 		}
 
-		#endregion Constructors
+        public Part( Part p)
+        {
+            PartName = p.PartName;
+            Title = p.Title;
+            Description = p.Description;
+            Cost = p.Cost;
+            TechRequired = p.TechRequired;
+            Category = p.Category;
+            Icon = p.Icon;
+            ModName = p.ModName;
+            _fileName = p.FileName;
+        }
 
-		#region Members
+        #endregion Constructors
 
-		public void PopulateFromSource(KerbalNode node)
+        #region Members
+
+        public void PopulateFromSource(KerbalNode node)
 		{
 			var v = node.Values;
 

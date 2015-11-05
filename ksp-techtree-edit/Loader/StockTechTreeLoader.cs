@@ -7,6 +7,7 @@ using KerbalParser;
 using ksp_techtree_edit.Models;
 using ksp_techtree_edit.ViewModels;
 using System.Windows;
+using ksp_techtree_edit.Util;
 
 namespace ksp_techtree_edit.Loader
 {
@@ -157,27 +158,71 @@ namespace ksp_techtree_edit.Loader
 
             // Create an empty parents collection, populated during linking
             newNode.Parents = new List<TechNode>();
-
-            //var tmpParts = new List<string>();
-            //foreach (var child in sourceNode.Children.Where(child => child.Name == "Unlocks").Where(child => child.Values.ContainsKey("part")))
-            //{
-            //    tmpParts.AddRange(child.Values["part"]);
-            //}
-            //newNode.Parts = new List<string>(tmpParts);
             newNode.Parts = new List<string>();
 
             return newNode;
         }
 
-        public override void PopulateParts(PartCollectionViewModel partCollectionViewModel, TechNodeViewModel node)
+        public override void PopulateParts(PartCollectionViewModel pc, TechTreeViewModel ttvm)
         {
-            foreach (var part in partCollectionViewModel.PartCollection)
+
+            // Add all part in node
+            foreach (var node in ttvm.TechTree)
             {
-                if (part.TechRequired == node.Id)
+                foreach (var part in pc.PartCollection)
                 {
-                    node.Parts.Add(part);
+                    if (part.TechRequired == node.Id)
+                    {
+                        node.TechNode.Parts.Add(part.PartName);
+                    }
+                }
+            }
+
+            // Create and init part table with name => partviewmodel
+            var partTable = new Dictionary<string, PartViewModel>();
+            foreach (PartViewModel part in pc.PartCollection)
+            {
+                try
+                {
+                    if (!partTable.ContainsKey(part.PartName))
+                    {
+                        partTable.Add(part.PartName, part);
+                    }
+                    else
+                    {
+                        var duplicate = partTable[part.PartName];
+                        var existString = String.Format(" - Existing part: {0} ({1})", duplicate.PartName, duplicate.FileName);
+                        Logger.Error("PartLoader: Error while storing part \"{0}\" " + "({1}) into PartCollection - {2}{3}", part.PartName, part.FileName, "Part already exists", existString);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Logger.Error("PartLoader: Error while storing part \"{0}\" " + "({1}) into PartCollection - {2}", part.PartName, part.FileName, e.Message);
+                }
+            }
+
+
+            foreach (var node in ttvm.TechTree)
+            {
+                foreach (String part in node.TechNode.Parts)
+                {
+                    if (partTable.ContainsKey(part))
+                    {
+                        node.Parts.Add(partTable[part]);
+                        pc.PartCollection.Remove(partTable[part]);
+                    }
+                    else
+                    {
+                        var tmpPart = new Part(part) { Title = part, TechRequired = node.Id, Category = "(Unknown)" };
+                        node.Parts.Add(new PartViewModel(tmpPart));
+                    }
                 }
             }
         }
+
+
+
+
+
     }
 }

@@ -60,7 +60,6 @@ C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp
 C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
 C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
 C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\resources\StockTechTree.cfg
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe.config
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
@@ -122,3 +121,6 @@ D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp_techtree_ed
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csproj.GenerateResource.Cache
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\StockTechTree.cfg
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\MyPartCatalog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\MyPartCatalog.baml

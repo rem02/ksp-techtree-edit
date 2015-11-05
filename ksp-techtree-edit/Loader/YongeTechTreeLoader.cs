@@ -169,9 +169,10 @@ namespace ksp_techtree_edit.Loader
             return newNode;
         }
 
-        public override void PopulateParts(PartCollectionViewModel pc, TechNodeViewModel node)
+        public override void PopulateParts(PartCollectionViewModel pc, TechTreeViewModel ttvm)
         {
-            // Create and init parte table with name => partviewmodel
+
+            // Create and init part table with name => partviewmodel
             var partTable = new Dictionary<string, PartViewModel>();
             foreach (PartViewModel part in pc.PartCollection)
             {
@@ -194,19 +195,23 @@ namespace ksp_techtree_edit.Loader
                 }
             }
 
-            foreach (String part in node.TechNode.Parts)
+            foreach( var node in ttvm.TechTree )
             {
-                if (partTable.ContainsKey(part))
+                foreach (String part in node.TechNode.Parts)
                 {
-                    node.Parts.Add(partTable[part]);
-                    pc.PartCollection.Remove(partTable[part]);
-                }
-                else
-                {
-                    var tmpPart = new Part(part) { Title = part, TechRequired = node.Id, Category = "(Unknown)" };
-                    node.Parts.Add(new PartViewModel(tmpPart));
+                    if (partTable.ContainsKey(part))
+                    {
+                        node.Parts.Add(partTable[part]);
+                        pc.PartCollection.Remove(partTable[part]);
+                    }
+                    else
+                    {
+                        var tmpPart = new Part(part) { Title = part, TechRequired = node.Id, Category = "(Unknown)" };
+                        node.Parts.Add(new PartViewModel(tmpPart));
+                    }
                 }
             }
+
         }
     }
 }

@@ -18,7 +18,7 @@ namespace ksp_techtree_edit.Loader
 
         public abstract TechNode PopulateFromSource(KerbalNode sourceNode);
 
-        public abstract void PopulateParts(PartCollectionViewModel pc, TechNodeViewModel node);
+        public abstract void PopulateParts(PartCollectionViewModel pc, TechTreeViewModel ttvm);
 
     }
 }

@@ -43,12 +43,12 @@ namespace ksp_techtree_edit.Views
 			var sidebar = MainSideBar.DataContext as TechTreeViewModel;
 			if (sidebar == null)
                 return;
-			sidebar.WorkspaceViewModel = workspaceViewModel;
 
-			ContentGrid.DataContext = workspaceViewModel;
-			DataContext = workspaceViewModel;
+            DataContext = workspaceViewModel;
+            ContentGrid.DataContext = workspaceViewModel;
+            sidebar.WorkspaceViewModel = workspaceViewModel;
 
-		}
+        }
 
         /**
          * Method for create a new TechTree
@@ -109,10 +109,10 @@ namespace ksp_techtree_edit.Views
             sidebar.PartCollectionViewModel = partCollectionViewModel;
 
             _treeData.PartCollectionViewModel = partCollectionViewModel;
-            foreach (var node in _treeData.TechTree)
-            {
-                _treeLoader.PopulateParts(partCollectionViewModel, node);
-            }
+           // foreach (var node in _treeData.TechTree)
+           // {
+                _treeLoader.PopulateParts(partCollectionViewModel, _treeData);
+           // }
 
             PartsListBox.AddPartButton.DataContext = _treeData;
         }

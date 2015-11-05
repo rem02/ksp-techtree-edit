@@ -12,52 +12,22 @@ using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
 namespace ksp_techtree_edit.ViewModels
 {
     [DataContract]
+    [DefaultProperty("Id")]
     public class TechNodeViewModel : NotificationViewModel
     {
         #region Data Members
 
-        private bool _isSelected;
-        private TechNode _techNode;
-        private ObservableCollection<TechNodeViewModel> _parents = new ObservableCollection<TechNodeViewModel>();
-        private ObservableCollection<PartViewModel> _parts = new ObservableCollection<PartViewModel>();
-        public int Width { get; set; }
-        public int Height { get; set; }
-
-        public bool IsSelected
-        {
-            get { return _isSelected; }
-            set
-            {
-                if (_isSelected == value) return;
-                _isSelected = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public TechNode TechNode
-        {
-            get { return _techNode; }
-            set
-            {
-                if (_techNode == value) return;
-                _techNode = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public ObservableCollection<TechNodeViewModel> Parents
-        {
-            get { return _parents; }
-            set { _parents = value; }
-        }
-
-        public ObservableCollection<PartViewModel> Parts
-        {
-            get { return _parts; }
-            set { _parts = value; }
-        }
-
         #region Model Wrappers
+        public string Id
+        {
+            get { return _techNode.Id; }
+            set
+            {
+                if (_techNode.Id == value) return;
+                _techNode.Id = value;
+                OnPropertyChanged();
+            }
+        }
 
         public string NodePart
         {
@@ -70,7 +40,6 @@ namespace ksp_techtree_edit.ViewModels
             }
         }
 
-        [Description("Node title")]
         public string Title
         {
             get { return _techNode.Title; }
@@ -115,28 +84,6 @@ namespace ksp_techtree_edit.ViewModels
             }
         }
 
-        public int Zlayer
-        {
-            get { return _techNode.Zlayer; }
-            set
-            {
-                if (_techNode.Zlayer == value) return;
-                _techNode.Zlayer = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Id
-        {
-            get { return _techNode.Id; }
-            set
-            {
-                if (_techNode.Id == value) return;
-                _techNode.Id = value;
-                OnPropertyChanged();
-            }
-        }
-
         [ItemsSource(typeof(IconEnumItemsSource))]
         public IconsEnum Icon
         {
@@ -149,6 +96,17 @@ namespace ksp_techtree_edit.ViewModels
                 if (_techNode.Icon == value)
                     return;
                 _techNode.Icon = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public double Scale
+        {
+            get { return _techNode.Scale; }
+            set
+            {
+                if (_techNode.Scale == value) return;
+                _techNode.Scale = value;
                 OnPropertyChanged();
             }
         }
@@ -186,18 +144,70 @@ namespace ksp_techtree_edit.ViewModels
             }
         }
 
-        public double Scale {
-            get { return _techNode.Scale; }
+        
+
+        [Browsable(false)]
+        public int Zlayer
+        {
+            get { return _techNode.Zlayer; }
             set
             {
-                if (_techNode.Scale == value) return;
-                _techNode.Scale = value;
+                if (_techNode.Zlayer == value) return;
+                _techNode.Zlayer = value;
                 OnPropertyChanged();
             }
         }
 
-		#endregion Model Wrappers
+        #endregion Model Wrappers
 
+        private bool _isSelected;
+        private TechNode _techNode;
+        private ObservableCollection<TechNodeViewModel> _parents = new ObservableCollection<TechNodeViewModel>();
+        private ObservableCollection<PartViewModel> _parts = new ObservableCollection<PartViewModel>();
+
+        [Browsable(false)]
+        public int Width { get; set; }
+        [Browsable(false)] 
+        public int Height { get; set; }
+
+        [Browsable(false)]
+        public bool IsSelected
+        {
+            get { return _isSelected; }
+            set
+            {
+                if (_isSelected == value) return;
+                _isSelected = value;
+                OnPropertyChanged();
+            }
+        }
+
+        [Browsable(false)]
+        public TechNode TechNode
+        {
+            get { return _techNode; }
+            set
+            {
+                if (_techNode == value) return;
+                _techNode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        [Browsable(false)]
+        public ObservableCollection<TechNodeViewModel> Parents
+        {
+            get { return _parents; }
+            set { _parents = value; }
+        }
+
+        [Browsable(false)]
+        public ObservableCollection<PartViewModel> Parts
+        {
+            get { return _parts; }
+            set { _parts = value; }
+        }
+       
 		#endregion Data Members
 
 		#region Constructors
