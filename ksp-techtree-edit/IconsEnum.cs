@@ -8,6 +8,7 @@ namespace ksp_techtree_edit
      */
     public enum IconsEnum
 	{
+
         RDicon_generic,
         RDicon_start,
         RDicon_basicrocketry,              

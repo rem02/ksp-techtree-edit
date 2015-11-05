@@ -7,6 +7,7 @@ using ksp_techtree_edit.Models;
 using ksp_techtree_edit.Util;
 using System.ComponentModel;
 using ksp_techtree_edit.Converters;
+using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
 
 namespace ksp_techtree_edit.ViewModels
 {
@@ -135,7 +136,8 @@ namespace ksp_techtree_edit.ViewModels
                 OnPropertyChanged();
             }
         }
-     
+
+        [ItemsSource(typeof(IconEnumItemsSource))]
         public IconsEnum Icon
         {
             get

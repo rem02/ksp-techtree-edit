@@ -60,21 +60,8 @@ C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp
 C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
 C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
 C:\Users\Remi\Desktop\Original_KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\resources\StockTechTree.cfg
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe.config
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\HelpDialog.baml
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\NodePartsList.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\PartCatalog.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\SideBar.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\TechTreeDiagram.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\HelpDialog.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\MainWindow.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\StartupDialog.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\App.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\GeneratedInternalTypeHelper.g.cs
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.cache
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.lref
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\GalaSoft.MvvmLight.dll
@@ -112,6 +99,18 @@ D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\ro\Xceed.Wpf.Av
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\HelpDialog.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\NodePartsList.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\PartCatalog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\SideBar.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\TechTreeDiagram.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\HelpDialog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\MainWindow.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\StartupDialog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\App.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.lref
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\NodePartsList.baml
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\PartCatalog.baml
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Controls\SideBar.baml
@@ -121,5 +120,5 @@ D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\Views\StartupDi
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.g.resources
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp_techtree_edit.Properties.Resources.resources
 D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csproj.GenerateResource.Cache
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Debug\resources\StockTechTree.cfg
-D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\ksp-techtree-edit.csprojResolveAssemblyReference.cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.exe
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Debug\KSP Tech Tree Editor v0.2.4 Alpha.pdb
