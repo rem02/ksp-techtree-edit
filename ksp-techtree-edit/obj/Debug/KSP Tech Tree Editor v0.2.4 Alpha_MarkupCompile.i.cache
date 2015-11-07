@@ -16,5 +16,5 @@ D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\App.xaml
 821281254606
 Controls\MyPartCatalog.xaml;Controls\NodePartsList.xaml;Controls\PartCatalog.xaml;Controls\SideBar.xaml;Controls\TechTreeDiagram.xaml;Views\HelpDialog.xaml;Views\MainWindow.xaml;Views\StartupDialog.xaml;
 
-True
+False
 
