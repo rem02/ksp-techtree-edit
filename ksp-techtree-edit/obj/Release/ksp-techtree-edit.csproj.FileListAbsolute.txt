@@ -1,0 +1,65 @@
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\KSP Tech Tree Editor v0.2.4 Alpha.exe.config
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\KSP Tech Tree Editor v0.2.4 Alpha.exe
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\KSP Tech Tree Editor v0.2.4 Alpha.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.Extras.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.Platform.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\KerbalParser.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Microsoft.WindowsAPICodePack.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\System.Windows.Interactivity.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Xceed.Wpf.AvalonDock.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Xceed.Wpf.DataGrid.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Xceed.Wpf.Toolkit.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.xml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.Extras.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.Extras.xml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.Platform.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\GalaSoft.MvvmLight.Platform.xml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\KerbalParser.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Microsoft.Practices.ServiceLocation.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Microsoft.Practices.ServiceLocation.xml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Microsoft.WindowsAPICodePack.xml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Views\HelpDialog.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\NodePartsList.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\PartCatalog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\SideBar.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\TechTreeDiagram.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Views\HelpDialog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Views\MainWindow.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Views\StartupDialog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\App.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\KSP Tech Tree Editor v0.2.4 Alpha_MarkupCompile.lref
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\NodePartsList.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\PartCatalog.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\SideBar.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\TechTreeDiagram.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Views\MainWindow.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Views\StartupDialog.baml
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\KSP Tech Tree Editor v0.2.4 Alpha.g.resources
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\ksp_techtree_edit.Properties.Resources.resources
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\ksp-techtree-edit.csproj.GenerateResource.Cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\KSP Tech Tree Editor v0.2.4 Alpha.exe
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\KSP Tech Tree Editor v0.2.4 Alpha.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\ksp-techtree-edit.csprojResolveAssemblyReference.cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\bin\Release\StockTechTree.cfg
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\MyPartCatalog.g.cs
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\ksp-techtree-edit\obj\Release\Controls\MyPartCatalog.baml

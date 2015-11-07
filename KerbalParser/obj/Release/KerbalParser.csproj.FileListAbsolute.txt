@@ -1,0 +1,5 @@
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\KerbalParser\bin\Release\KerbalParser.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\KerbalParser\bin\Release\KerbalParser.pdb
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\KerbalParser\obj\Release\KerbalParser.csprojResolveAssemblyReference.cache
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\KerbalParser\obj\Release\KerbalParser.dll
+D:\DEV\PROJETS\NET\KSPTechTreeEditor\KerbalParser\obj\Release\KerbalParser.pdb
