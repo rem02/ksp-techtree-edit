@@ -22,7 +22,7 @@ namespace ksp_techtree_edit.ViewModels
 
 		public string ComposedTitle
 		{
-			get { return String.Format("{0} - ({1}: {2})", Title, TechRequired, Cost); }
+			get { return String.Format("{0} - {1}", ModName, Title); }
 		}
 
 		#region Model Wrappers

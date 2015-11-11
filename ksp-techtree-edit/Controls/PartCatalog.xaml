@@ -12,16 +12,16 @@
 	</UserControl.DataContext>
     
 	<UserControl.Resources>
-		<CollectionViewSource Source="{Binding PartCollection}" x:Key="PartCollectionView">
-			<CollectionViewSource.GroupDescriptions>
-				<PropertyGroupDescription PropertyName="Category" />
-			</CollectionViewSource.GroupDescriptions>
-			<CollectionViewSource.SortDescriptions>
-				<componentModel:SortDescription PropertyName="Cost"/>
-			</CollectionViewSource.SortDescriptions>
-		</CollectionViewSource>
+        <CollectionViewSource Source="{Binding PartCollection}" x:Key="PartCollectionView">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Category" />
+            </CollectionViewSource.GroupDescriptions>
+            <CollectionViewSource.SortDescriptions>
+                <componentModel:SortDescription PropertyName="Cost"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
 
-		<Style x:Key="ExpandingGroupStyle" TargetType="{x:Type GroupItem}">
+        <Style x:Key="ExpandingGroupStyle" TargetType="{x:Type GroupItem}">
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate>
@@ -45,15 +45,41 @@
 			</ListBox.GroupStyle>
 			<ListBox.ItemTemplate>
 				<DataTemplate>
-					<Label Content="{Binding ComposedTitle}"/>
-				</DataTemplate>
+                    <Label Content="{Binding ComposedTitle}" >
+                        <Label.ToolTip>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Border HorizontalAlignment="Stretch" BorderThickness="0,0,0,1" BorderBrush="Black" 
+                                        Margin="5"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+                                    <TextBlock FontSize="14" Text="{Binding Title}"/>
+                                </Border>
+                                <TextBlock Grid.Column="0" Grid.Row="1" FontWeight="Bold" Text="Description: "/>
+                                <TextBlock Grid.Column="1" Grid.Row="1" Margin="10,0,5,0" Text="{Binding Description}"  TextWrapping="Wrap"/>
+                                <TextBlock Grid.Column="0" Grid.Row="2" FontWeight="Bold" Text="TechRequired: " />
+                                <TextBlock Grid.Column="1" Grid.Row="2" Margin="10,0,5,0" Text="{Binding TechRequired}" />
+                                <TextBlock Grid.Column="0" Grid.Row="3" FontWeight="Bold" Text="Cost: " />
+                                <TextBlock Grid.Column="1" Grid.Row="3" Margin="10,0,5,0" Text="{Binding Cost}" />
+                            </Grid>
+                        </Label.ToolTip>
+                    </Label>
+                </DataTemplate>
 			</ListBox.ItemTemplate>
 		</ListBox>
 		<Grid Grid.Row="1" MaxHeight="50px">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
-			<Button Name="AddPartButton" Grid.Column="0" HorizontalAlignment="Center" Content="Add" Click="AddPartClick">
+			<Button Name="AddPartButton" Grid.Column="0" HorizontalAlignment="Center" Content="Add to technode" Click="AddPartClick">
 				<Button.DataContext>
 					<viewModels:TechTreeViewModel/>
 				</Button.DataContext>

@@ -104,16 +104,18 @@ namespace ksp_techtree_edit.Models
 			}
 		}
 
+        // TODO Beter find Mod name (.version file...)
 		private string FindModName()
 		{
 			var di = new DirectoryInfo(FileName);
-
 			while (true)
 			{
 				if (di.Parent != null)
 				{
 					if (di.Parent.Name == "GameData")
+                    {
                         return di.Name;
+                    }                        
 					di = di.Parent;
 					continue;
 				}

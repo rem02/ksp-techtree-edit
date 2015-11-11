@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using KerbalParser;
@@ -11,6 +11,7 @@ using Microsoft.Win32;
 using ksp_techtree_edit.Saver;
 using ksp_techtree_edit.Models;
 using ksp_techtree_edit.Loader;
+
 
 namespace ksp_techtree_edit.Views
 {
@@ -98,11 +99,10 @@ namespace ksp_techtree_edit.Views
         public void FindParts()
         {
             var partCollectionViewModel = PartsListBox.DataContext as PartCollectionViewModel;
-
             if (partCollectionViewModel == null)
                 return;
             // Load squad parts
-            partCollectionViewModel.LoadParts(Settings.Default.KspPath+"/GameData/Squad");
+            partCollectionViewModel.LoadParts(Settings.Default.KspPath+ Path.DirectorySeparatorChar +"GameData");
 
             var sidebar = MainSideBar.DataContext as TechTreeViewModel;
             if (sidebar == null)
@@ -110,10 +110,9 @@ namespace ksp_techtree_edit.Views
             sidebar.PartCollectionViewModel = partCollectionViewModel;
 
             _treeData.PartCollectionViewModel = partCollectionViewModel;
-           // foreach (var node in _treeData.TechTree)
-           // {
+
+           if( _treeLoader != null)
                 _treeLoader.PopulateParts(partCollectionViewModel, _treeData);
-           // }
 
             PartsListBox.AddPartButton.DataContext = _treeData;
         }
@@ -234,5 +233,9 @@ namespace ksp_techtree_edit.Views
 			dlg.ShowDialog();
 		}
 
+        private void MainWindow_AddPartClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

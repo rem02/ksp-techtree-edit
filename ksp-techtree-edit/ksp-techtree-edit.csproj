@@ -134,9 +134,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\MyPartCatalog.xaml.cs">
-      <DependentUpon>MyPartCatalog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\NodePartsList.xaml.cs">
       <DependentUpon>NodePartsList.xaml</DependentUpon>
     </Compile>
@@ -180,10 +177,6 @@
     <Compile Include="Views\StartupDialog.xaml.cs">
       <DependentUpon>StartupDialog.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\MyPartCatalog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\NodePartsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
