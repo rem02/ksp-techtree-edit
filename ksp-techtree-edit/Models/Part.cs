@@ -56,8 +56,22 @@ namespace ksp_techtree_edit.Models
         public Part( Part p)
         {
             PartName = p.PartName;
-            Title = p.Title;
-            Description = p.Description;
+            if(p.Title.Contains("autoLOC"))
+            {
+
+            }
+            else
+            {   
+                Title = p.Title;
+            }
+            if(p.Description.Contains("autoLOC"))
+            {
+
+            }
+            else
+            {  
+                Description = p.Description;
+            }
             Cost = p.Cost;
             TechRequired = p.TechRequired;
             Category = p.Category;
