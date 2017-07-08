@@ -6,7 +6,12 @@ namespace SquadAdjustment
 {
     public class SquadAdjustment
     {
-        public string SquadAdjustment(Part )
+        public static string SquadAdjustment(Part WrongInformation)
+        {
+            string FullPartsList = new string();
+            FullpartsList = Directory.GetFiles(@"C:\\", SearchOption.AllDirectories);
+            StreamReader reading = new StreamReader();
+        }
     }
 }
 

@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using KerbalParser;
 using ksp_techtree_edit.Util;
+using SquadAdjustment;
 
 namespace ksp_techtree_edit.Models
 {
