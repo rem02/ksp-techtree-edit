@@ -56,9 +56,10 @@ namespace SquadPartsReplacement
                 if (line.Contains(WrongPart["name"].First()))
                 {
                     token = line.Split('=');
+                    int counter = 0;
                     foreach (var tokentest in token)
                     {
-                        if ((tokentest.Contains("autoLOC")) || (tokentest.Contains(WrongPart["name"].First())))
+                        if ((tokentest.Contains("autoLOC")) || (counter < 2))
                         {
                         }
                         else
@@ -66,6 +67,7 @@ namespace SquadPartsReplacement
                             replacement = tokentest;
                             return replacement;
                         }
+                        counter++;
                     }
                 }
                 else
