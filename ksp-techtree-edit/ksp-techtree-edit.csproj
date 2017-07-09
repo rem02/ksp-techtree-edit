@@ -151,6 +151,7 @@
     <Compile Include="Loader\StockTechTreeLoader.cs" />
     <Compile Include="Loader\TreeLoader.cs" />
     <Compile Include="Loader\YongeTechTreeLoader.cs" />
+    <Compile Include="Models\SquadPartsReplacement.cs" />
     <Compile Include="Models\Part.cs" />
     <Compile Include="Models\PartCollection.cs" />
     <Compile Include="Models\TechNode.cs" />
@@ -271,6 +272,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="stocknodes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SquadParts.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

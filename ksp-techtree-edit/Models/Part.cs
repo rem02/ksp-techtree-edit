@@ -1,9 +1,9 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using KerbalParser;
 using ksp_techtree_edit.Util;
-using SquadAdjustment;
 
 namespace ksp_techtree_edit.Models
 {
@@ -56,23 +56,9 @@ namespace ksp_techtree_edit.Models
 
         public Part( Part p)
         {
-            PartName = p.PartName;
-            if(p.Title.Contains("autoLOC"))
-            {
-
-            }
-            else
-            {   
-                Title = p.Title;
-            }
-            if(p.Description.Contains("autoLOC"))
-            {
-
-            }
-            else
-            {  
-                Description = p.Description;
-            }
+            PartName = p.PartName;  
+            Title = p.Title;
+            Description = p.Description;
             Cost = p.Cost;
             TechRequired = p.TechRequired;
             Category = p.Category;
@@ -93,13 +79,29 @@ namespace ksp_techtree_edit.Models
 
 			if (v.ContainsKey("title"))
 			{
-				Title = v["title"].First();
+                Title = v["title"].First();
+                if(Title.Contains("autoLOC"))
+                {
+                    Title = SquadPartsReplacement.SquadPartsReplacement.ReplaceSquadTextTitle(v);
+                }
+                else
+                {
+
+                }
 			}
 
 			if (v.ContainsKey("description"))
 			{
 				Description = v["description"].First();
-			}
+                if (Description.Contains("autoLOC"))
+                {
+                    Description = SquadPartsReplacement.SquadPartsReplacement.ReplaceSquadTextDescription(v);
+                }
+                else
+                {
+
+                }
+            }
 
 			if (v.ContainsKey("cost"))
 			{
