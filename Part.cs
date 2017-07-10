@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using KerbalParser;
@@ -56,7 +55,7 @@ namespace ksp_techtree_edit.Models
 
         public Part( Part p)
         {
-            PartName = p.PartName;  
+            PartName = p.PartName;
             Title = p.Title;
             Description = p.Description;
             Cost = p.Cost;
@@ -77,31 +76,15 @@ namespace ksp_techtree_edit.Models
 
 			if (PartName == null) PartName = v["name"].First();
 
-			if (v.ContainsKey("title"))
+			if (v.ContainsKey("name"))
 			{
-                Title = v["title"].First();
-                if(Title.Contains("autoLOC"))
-                {
-                    Title = SquadPartsReplacement.SquadPartsReplacement.ReplaceSquadTextTitle(v);
-                }
-                else
-                {
-
-                }
+				Title = v["name"].First();
 			}
 
 			if (v.ContainsKey("description"))
 			{
 				Description = v["description"].First();
-                if (Description.Contains("autoLOC"))
-                {
-                    Description = SquadPartsReplacement.SquadPartsReplacement.ReplaceSquadTextDescription(v);
-                }
-                else
-                {
-
-                }
-            }
+			}
 
 			if (v.ContainsKey("cost"))
 			{

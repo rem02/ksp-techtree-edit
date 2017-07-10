@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ksp-techtree-edit", "ksp-techtree-edit\ksp-techtree-edit.csproj", "{4119C3CE-8293-4AB8-BF0E-35C753F71A11}"
 EndProject
@@ -13,12 +13,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4119C3CE-8293-4AB8-BF0E-35C753F71A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4119C3CE-8293-4AB8-BF0E-35C753F71A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4119C3CE-8293-4AB8-BF0E-35C753F71A11}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{4119C3CE-8293-4AB8-BF0E-35C753F71A11}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{4119C3CE-8293-4AB8-BF0E-35C753F71A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4119C3CE-8293-4AB8-BF0E-35C753F71A11}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1332EEF3-E313-4844-AFB4-B3DCD0B4A457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1332EEF3-E313-4844-AFB4-B3DCD0B4A457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1332EEF3-E313-4844-AFB4-B3DCD0B4A457}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{1332EEF3-E313-4844-AFB4-B3DCD0B4A457}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{1332EEF3-E313-4844-AFB4-B3DCD0B4A457}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1332EEF3-E313-4844-AFB4-B3DCD0B4A457}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
