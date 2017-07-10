@@ -3,6 +3,7 @@ using System.IO;
 using KerbalParser;
 using ksp_techtree_edit.Models;
 using ksp_techtree_edit.Util;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,10 @@ namespace SquadPartsReplacement
             string[] token;
             while((line = file.ReadLine()) != null)
             {
-                if (line.Contains(WrongPart["name"].First()))
+                var linename = line.Trim().Split('=');
+                var linetest = linename.First();
+                if ((String.Compare(linetest, WrongPart["name"].First(), true)) == 0)
+                //if (line.Contains(WrongPart["name"].First()))
                 {
                     token = line.Split('=');
                     foreach(var tokentest in token)
